@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+#Custom file to ignore
+.vscode
+launch.json
+settings.json
+workspace_data_recipe.code-workspace
