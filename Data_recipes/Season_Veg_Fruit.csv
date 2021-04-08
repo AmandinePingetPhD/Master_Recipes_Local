@@ -1,9 +1,9 @@
 Season;Fruit_vegetable;Fruit;Vegetable
-winter, spring, autumn, summer;hazelnut;x;
-winter, spring, autumn, summer;walnut;x;
-winter, spring, autumn, summer;chestnut;x;
+all season;hazelnut;x;
+all season;walnut;x;
+all season;chestnut;x;
 winter, spring, summer;grapefruit;x;
-winter, spring, summer, autumn;lemon;x;
+all season;lemon;x;
 winter, spring;orange;x;
 winter, spring;tangerine;x;
 winter;kale;;x
@@ -17,7 +17,7 @@ spring, winter;brussel sprout;;x
 spring, winter;beetroot;;x
 spring, winter;red cabbage;;x
 summer;apricot;x;
-spring, summer, autumn, winter;avocado;;x
+all season;avocado;;x
 spring;mango;x;
 spring, autumn, winter;pineapple;x;
 spring;rhubarb;x;
@@ -25,8 +25,8 @@ spring, summer;strawberrie;x;
 spring;artichoke;;x
 spring;asparagus;;x
 spring, autumn, winter;spinach;;x
-summer, spring, autumn, winter;carrot;;x
-summer, spring, autumn, winter;pepperoni;;x
+all season;carrot;;x
+all season;pepperoni;;x
 spring;celeriac;;x
 spring;chive;;x
 spring;collard;;x
@@ -47,7 +47,7 @@ summer;raspberry;x;
 summer, spring;tomato;;x
 summer;corn;;x
 summer;watermelon;x;
-summer, spring, autumn, winter;broccoli;;x
+all season;broccoli;;x
 summer, spring ;cucumber;;x
 summer;green bean;;x
 summer, autumn;zucchini;;x
@@ -61,14 +61,14 @@ autumn;pomegranate;x;
 autumn;quince;x;
 autumn;butternut squash;;x
 autumn, spring, winter;cauliflower;;x
-autumn, spring, winter, summer;garlic;;x
-autumn, spring, winter, summer;mushroom;;x
-autumn, spring, winter, summer;potato;;x
+all season;garlic;;x
+all season;mushroom;;x
+all season;potato;;x
 autumn, winter;pumpkin;;x
 autumn;sweet potato;;x
 autumn;swiss chard;;x
 autumn, winter;chicory;;x
 autumn, winter;pak choi;;x
-autumn, spring, winter, summer;onion;;x
-autumn, spring, winter, summer;banana;x;
-autumn, spring, winter, summer;kiwi;x;
+all season;onion;;x
+all season;banana;x;
+autumn, spring, winter;kiwi;x;
