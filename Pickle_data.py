@@ -31,7 +31,7 @@ def pickle_season_veg_fruit():
     """
     Création du pickle pour les fruits et légumes de saison -- Ajout de vegetable et fruit
     """
-    data = pd.read_csv(r'.\Seasons_Veg_Fruits.csv', sep=';', dtype={'Season':str, 'Fruit_Vegetable': str, 'Fruit': str, 'Vegetable': str} )
+    data = pd.read_csv(r'.\Season_Veg_Fruit.csv', sep=';', dtype={'Season':str, 'Fruit_Vegetable': str, 'Fruit': str, 'Vegetable': str} )
     pickle.dump(data, open("table_season_veg_fr.pkl", "wb"))
     print(data)
 

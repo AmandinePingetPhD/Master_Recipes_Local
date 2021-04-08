@@ -1,0 +1,74 @@
+Season;Fruit_vegetable;Fruit;Vegetable
+winter, spring, autumn, summer;hazelnut;x;
+winter, spring, autumn, summer;walnut;x;
+winter, spring, autumn, summer;chestnut;x;
+winter, spring, summer;grapefruit;x;
+winter, spring, summer, autumn;lemon;x;
+winter, spring;orange;x;
+winter, spring;tangerine;x;
+winter;kale;;x
+winter;leek;;x
+winter;radicchio;;x
+winter;radish;;x
+winter, spring;small radish;;x
+winter;rutabaga;;x
+winter;turnip;;x
+spring, winter;brussel sprout;;x
+spring, winter;beetroot;;x
+spring, winter;red cabbage;;x
+summer;apricot;x;
+spring, summer, autumn, winter;avocado;;x
+spring;mango;x;
+spring, autumn, winter;pineapple;x;
+spring;rhubarb;x;
+spring, summer;strawberrie;x;
+spring;artichoke;;x
+spring;asparagus;;x
+spring, autumn, winter;spinach;;x
+summer, spring, autumn, winter;carrot;;x
+summer, spring, autumn, winter;pepperoni;;x
+spring;celeriac;;x
+spring;chive;;x
+spring;collard;;x
+spring, summer;pea;;x
+spring, summer;fava bean;;x
+spring, summer;fennel;;x
+spring;fiddlehead fern;;x
+spring;morel;;x
+spring;mustard green;;x
+spring, summer;eggplant;;x
+summer, autumn;blackberry;x;
+spring, summer;cherry;x;
+summer;blueberry;x;
+summer;nectarine;x;
+summer;peach;x;
+summer;plum;x;
+summer;raspberry;x;
+summer, spring;tomato;;x
+summer;corn;;x
+summer;watermelon;x;
+summer, spring, autumn, winter;broccoli;;x
+summer, spring ;cucumber;;x
+summer;green bean;;x
+summer, autumn;zucchini;;x
+summer, autumn, winter;celery;;x
+autumn, winter, spring;apple;x;
+autumn;cranberry;x;
+autumn;fig;x;
+autumn;grape;x;
+autumn, winter;pear;x;
+autumn;pomegranate;x;
+autumn;quince;x;
+autumn;butternut squash;;x
+autumn, spring, winter;cauliflower;;x
+autumn, spring, winter, summer;garlic;;x
+autumn, spring, winter, summer;mushroom;;x
+autumn, spring, winter, summer;potato;;x
+autumn, winter;pumpkin;;x
+autumn;sweet potato;;x
+autumn;swiss chard;;x
+autumn, winter;chicory;;x
+autumn, winter;pak choi;;x
+autumn, spring, winter, summer;onion;;x
+autumn, spring, winter, summer;banana;x;
+autumn, spring, winter, summer;kiwi;x;
