@@ -61,14 +61,22 @@ def classification_recipe(data, table_season):
                 # search = table_season["Fruit_vegetable"].str.find(subelem, start=0)
                 search = table_season.query('Fruit_vegetable==@subel')
                 # print(search)
-                if not search.empty:
+                if not search.empty:  #Add season when fruit/veg match season 
                     # print(search)
                     result = search['Season']
-                    data[keys]['Season'] = result
-                    #Add season when fruit/veg match season 
+                    data[keys].update({'Season' : result})
+                    ### si fruit ou 'sugar' ou 'chocolate' : dessert
+                    ## si legume ou 'salt' ou 'chicken'...: dish
+                    ## si 'drink ' : drink ##
+
                 else:
-                    data[keys]['Season'] = 'all season'
-        # print(data[keys]['RecipeId'], data[keys]['Season'])
+                    data[keys].update({'Season' : 'all season'})
+        print(data[keys]['RecipeId'], data[keys]['Season'])
+
+####classif chaud / froid
+### : "hot", "oven", "bake"
+### : "cold", "cool", "fridge"
+
 
 ####Export des données modifiées
 with open('recipes_raw_result_season.json', 'w') as outfile:
