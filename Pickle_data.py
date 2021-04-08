@@ -24,16 +24,21 @@ def pickle_season():
     Création du pickle pour les fruits et légumes de saison
     """
     data = pd.read_csv(r'.\Seasons_Veg_Fruits.csv', sep=';', dtype={'Season':str, 'Fruit_Vegetable': str})
-    print(data)
-    # table_season = pd.DataFrame(data, columns=['Season', 'Fruit_Vegetable'])
-    # print(table_season)
+    # print(data)
     pickle.dump(data, open("table_season.pkl", "wb"))
 
-
+def pickle_season_veg_fruit():
+    """
+    Création du pickle pour les fruits et légumes de saison -- Ajout de vegetable et fruit
+    """
+    data = pd.read_csv(r'.\Seasons_Veg_Fruits.csv', sep=';', dtype={'Season':str, 'Fruit_Vegetable': str, 'Fruit': str, 'Vegetable': str})
+    print(data)
+    pickle.dump(data, open("table_season_veg_fr.pkl", "wb"))
 
 def main():
     
-    pickle_season()
+    # pickle_season()
+    pickle_season_veg_fruit()
 
 if __name__ == "__main__":
     main()

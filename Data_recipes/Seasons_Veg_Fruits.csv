@@ -1,57 +1,74 @@
-Season;Fruit_vegetable
-winter;chestnuts
-winter;grapefruit
-winter;lemons
-winter;oranges
-winter;tangerines
-winter;kale
-winter;leeks
-winter;radicchio
-winter;radishes
-winter;rutabaga
-winter;turnips
-spring;apricots
-spring;avocado
-spring;mango
-spring;pineapple
-spring;rhubarb
-spring;strawberries
-spring;artichoke
-spring;asparagus
-spring;carrots
-spring;celeriac
-spring;chives
-spring;collards
-spring;fava beans
-spring;fennel
-spring;fiddlehead ferns
-spring;morels
-spring;mustard greens
-summer;blackberries
-summer;blueberries
-summer;nectarines
-summer;peaches
-summer;plums
-summer;raspberries
-summer;tomatoes
-summer;watermelon
-summer;broccoli
-summer;cucumber
-summer;green beans
-summer;zucchini
-autumn;apples
-autumn;cranberries
-autumn;figs
-autumn;grapes
-autumn;pears
-autumn;pomegranate
-autumn;quince
-autumn;butternut squash
-autumn;cauliflower
-autumn;garlic
-autumn;ginger
-autumn;mushrooms
-autumn;potatoes
-autumn;pumpkin
-autumn;sweet potatoes
-autumn;swiss chard
+Season;Fruit_vegetable;Fruit;Vegetable
+winter, spring, autumn;hazelnuts;x;
+winter, spring, autumn;walnuts;x;
+winter;chestnuts;x;
+winter, spring, summer;grapefruit;x;
+winter, spring, summer, autumn;lemons;x;
+winter, spring;oranges;x;
+winter, spring;tangerines;x;
+winter;kale;;x
+winter;leeks;;x
+winter;radicchio;;x
+winter;radishes;;x
+winter, spring;small radishes;;x
+winter;rutabaga;;x
+winter;turnips;;x
+spring, winter;brussels sprouts;;x
+spring, winter;beetroot;;x
+spring, winter;red cabbage;;x
+summer;apricots;x;
+spring, summer, autumn, winter;avocado;;x
+spring;mango;x;
+spring, autumn, winter;pineapple;x;
+spring;rhubarb;x;
+spring, summer;strawberries;x;
+spring;artichoke;;x
+spring;asparagus;;x
+spring, autumn, winter;spinach;;x
+summer, spring, autumn, winter;carrots;;x
+summer, spring, autumn, winter;pepper;;x
+spring;celeriac;;x
+spring;chives;;x
+spring;collards;;x
+spring, summer;peas;;x
+spring, summer;fava beans;;x
+spring, summer;fennel;;x
+spring;fiddlehead ferns;;x
+spring;morels;;x
+spring;mustard greens;;x
+spring, summer;eggplants;;x
+summer, autumn;blackberries;x;
+spring, summer;cherries;x;
+summer;blueberries;x;
+summer;nectarines;x;
+summer;peaches;x;
+summer;plums;x;
+summer;raspberries;x;
+summer, spring;tomatoes;;x
+summer;corn;;x
+summer;watermelon;x;
+summer, spring, autumn, winter;broccoli;;x
+summer, spring ;cucumber;;x
+summer;green beans;;x
+summer, autumn;zucchini;;x
+summer, autumn, winter;celery;;x
+autumn, winter, spring;apples;x;
+autumn;cranberries;x;
+autumn;figs;x;
+autumn;grapes;x;
+autumn, winter;pears;x;
+autumn;pomegranate;x;
+autumn;quince;x;
+autumn;butternut squash;;x
+autumn, spring, winter;cauliflower;;x
+autumn, spring, winter, summer;garlic;;x
+autumn, spring, winter, summer;mushrooms;;x
+autumn, spring, winter, summer;potatoes;;x
+autumn, winter;pumpkin;;x
+autumn;sweet potatoes;;x
+autumn;swiss chard;;x
+autumn, winter;chicory;;x
+autumn, winter;pak choi;;x
+autumn, spring, winter, summer;onions;;x
+autumn, spring, winter, summer;bananas;x;
+autumn, spring, winter, summer;kiwi;x;
