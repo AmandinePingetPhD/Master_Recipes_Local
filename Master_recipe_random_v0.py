@@ -27,8 +27,6 @@ print("\n", "Hello Ama, what do you want to cook today?", "\n")
 with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
 
-#v2 : traduction en français et conversion des cup/onces...
-
 def fonction_master_cook(data):
     """
     Fonction principale 
@@ -46,7 +44,6 @@ def fonction_master_cook(data):
         Identification et lecture des infos liées aux recettes
         """
         recipe = {}
-        # num_str = str(num)
         for keys, val in data.items():
             if num == val['RecipeId']:
                 recipe = data[keys]
