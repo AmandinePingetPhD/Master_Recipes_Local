@@ -142,3 +142,8 @@ cython_debug/
 launch.json
 settings.json
 workspace_data_recipe.code-workspace
+list_recipe_initial.txt
+list_recipe2.txt
+recipes_raw_result - Copie.json
+recipes_raw_result_classif.json
+recipes_raw_result_classif2.json
