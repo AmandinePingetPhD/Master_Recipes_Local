@@ -38,7 +38,24 @@ global table_season
 table_season = pickle.load(open("table_season_veg_fr.pkl", "rb"))
 # print(table_season)
 
-def classification_recipe(data, table_season):
+fruit = ["Fruit", "hazelnut", "walnut", "chestnut", "grapefruit", 
+            "lemon", "orange", "tangerine", "apricot", "mango",
+            "pineapple", "rhubarb", "strawberry", "blackberry",
+            "cherry", "blueberry", "nectarine", "peach", "plum",
+            "rasperry", "watermelon", "apple", "cranberry", "fig",
+            "grape", "pear", "pomegranate", "quince", "banana", "kiwi"]
+
+vegetable = ["Vegetable", "kale", "leek", "radicchio", "radish", "rutabaga", 
+            "turnip", "brussel sprout", "beetroot", "red cabbage",
+            "avocado", "artichoke", "asparagus", "spinach", "carrot",
+            "pepperoni", "celeriac", "chive", "collard", "pea", "fava bean", 
+            "fennel", "fiddlehead", "morel", "mustard", "eggplant",
+            "tomato", "corn", "broccoli", "cucumber", "green bean", "zucchini",
+            "celery", "butternut", "cauliflower", "galic", "mushroom", 
+            "potato", "pumpkin", "sweet potato", "swiss chard", "chicory",
+            "pak choi", "onion", "salad"]
+
+def classification_recipe(data, table_season, fruit, vegetable):
     """
     Fonction de classification par saison des recettes 
     """
@@ -49,42 +66,60 @@ def classification_recipe(data, table_season):
     # écrire la saison dans le fichier JSON
     #    'Fruit': str, 'Vegetable': str})
    
+    meat = ["Chicken", "Beef", "Turkey", "Meetloaf"]
+    egg = ["Egg"]
+    fish = ["fish", "Seafood", "Salmon", "Shrink" ]
+    # drink = ["water", "juice"]
+    dessert = ["Creme", "Chocolate", "Granola", "Brownies",
+                 "Cookie","Cookies", "Pancakes", "Bread", "Muffins", "Waffles", 
+                 "Biscuits", "Pie", "Crepes", "Pudding","Cheesecake", "Cake", "Bars"]
     p = inflect.engine()
 
     for keys in data:
-        for el in data[keys]['ingredients']:
-            new = el.split()
-            for subelem in  new :
-                subel = p.singular_noun(subelem)
-                if subel == False:
-                    subel = subelem
-                # search = table_season["Fruit_vegetable"].str.find(subelem, start=0)
-                search = table_season.query('Fruit_vegetable==@subel')
-                # print(search)
-                if not search.empty:  #Add season when fruit/veg match season 
-                    # print(search)
-                    result = search['Season']
-                    data[keys].update({'Season' : result})
-                    ### si fruit ou 'sugar' ou 'chocolate' : dessert
-                    ## si legume ou 'salt' ou 'chicken'...: dish
-                    ## si 'drink ' : drink ##
+        list1 =[i for item in [data[keys]["title"]] for i in item.split()]
+        list2 = set(list1)&set(fruit) # we don't need to list3 to actually be a list
+        list4 = sorted(list2, key = lambda k : list1.index(k))
 
+        if len(list4)!=0:
+            data[keys].update({"t_recipe": "Dessert with fruit"})
+        else:
+            list3 = set(list1)&set(dessert)
+            list5 = sorted(list3, key = lambda k : list1.index(k))
+            if len(list5)!=0:
+                data[keys].update({"t_recipe": "Dessert"})
+            else:
+                list6 = set(list1)&set(vegetable)
+                list7 = sorted(list6, key = lambda k : list1.index(k))
+                if len(list7)!=0:
+                    data[keys].update({"t_recipe": "Dish with veggies"})
                 else:
-                    data[keys].update({'Season' : 'all season'})
-        print(data[keys]['RecipeId'], data[keys]['Season'])
+                    list8 = set(list1)&set(meat)
+                    list9 = sorted(list8, key = lambda k : list1.index(k))
+                    if len(list9)!=0:
+                        data[keys].update({"t_recipe": "Dish with meat"})
+                    else:
+                        data[keys].update({"t_recipe": "Unknown"})
+                        ####Fish
+        
+        sys.stdout = open("list_recipe2.txt", "a")
+        print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+    sys.stdout.close()
 
-####classif chaud / froid
-### : "hot", "oven", "bake"
-### : "cold", "cool", "fridge"
+    # ####classif chaud / froid
+    ### : "hot", "oven", "bake"
+    ### : "cold", "cool", "fridge"
 
+    jsonfile.close()
 
-####Export des données modifiées
-with open('recipes_raw_result_season.json', 'w') as outfile:
-    json.dump(data, outfile)
+    ####Export des données modifiées
+    with open('recipes_raw_result_classif2.json', 'w') as outfile:
+        json.dump(data, outfile)
+    outfile.close()
+
 
 def main():
 
-    classification_recipe(data, table_season)    
+    classification_recipe(data, table_season, fruit, vegetable)    
 
 if __name__ == "__main__":
     main()
