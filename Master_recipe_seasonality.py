@@ -112,7 +112,13 @@ def fonction_master_cook(data, today):
         for keys in data:
             if key_w in data[keys]['title']:
                 print(data[keys]['title'])
-                print(data[keys])
+                # print(data[keys])
+        # if key_w not in data[keys]['title']:
+        #     search = input("I'm sorry, I haven't found what you're loooking for. Another try? (Y/N)")
+        #     if (search=='Y' or search=='y'):
+        #         search_recipe(data)
+        #     else:
+        #         print("Good bye, see you later ;)", "\n")
         ### Impression + export éventuel à améliorer
 
     def lecture_info_recette(num, data):
