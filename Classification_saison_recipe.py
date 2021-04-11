@@ -67,13 +67,14 @@ def classification_recipe(data, table_season, fruit, vegetable):
     #    'Fruit': str, 'Vegetable': str})
    
     meat = ["Chicken", "Beef", "Turkey", "Meetloaf"]
-    egg = ["Egg"]
-    fish = ["fish", "Seafood", "Salmon", "Shrink" ]
+    # egg = ["Egg"] ####To improve
+    # fish = ["fish", "Seafood", "Salmon", "Shrink" ] #####To improve
     # drink = ["water", "juice"]
     dessert = ["Creme", "Chocolate", "Granola", "Brownies",
                  "Cookie","Cookies", "Pancakes", "Bread", "Muffins", "Waffles", 
                  "Biscuits", "Pie", "Crepes", "Pudding","Cheesecake", "Cake", "Bars"]
-    p = inflect.engine()
+                 
+    # p = inflect.engine() ####Singular/plural
 
     for keys in data:
         list1 =[i for item in [data[keys]["title"]] for i in item.split()]
