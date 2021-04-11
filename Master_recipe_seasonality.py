@@ -20,7 +20,7 @@ os.chdir(newPath)
 import json
 import pickle
 import random
-from datetime import *
+from datetime import date
 import pandas as pd
 import numpy as np
 
@@ -70,11 +70,11 @@ def fonction_master_cook(data, today):
         num = random.randint(1,39517)
         return num
 
-    def check_seasonality(table_season, current_season, recipe):
-        ###Check avec 'Season' de la recette si all season : ok sinon comparaison de saison
-        """
-        Vérification si la recette est de saison
-        """
+    # def check_seasonality(table_season, current_season, recipe): To improve : voir comment gérer
+        # ###Check avec 'Season' de la recette si all season : ok sinon comparaison de saison
+        # """
+        # Vérification si la recette est de saison
+        # """
         # for el in recipe['ingredients']:
         #     for subelem in el:
         #         search = table_season.query('Fruit_Vegetable==@subelem')
