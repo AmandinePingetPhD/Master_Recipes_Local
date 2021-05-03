@@ -61,7 +61,7 @@ def classification_recipe(data, table_season, fruit, vegetable):
     """
 
     # interrogation de la base de données recette :
-    # passage en revue de chaque recette au niveau des ingrédients
+    # passage en revue de chaque recette au niveau du titre/des ingrédients
     # si fruit et légumes id à base table_season : recette de la saison des fruits/légumes
     # écrire la saison dans le fichier JSON
     #    'Fruit': str, 'Vegetable': str})
@@ -75,10 +75,12 @@ def classification_recipe(data, table_season, fruit, vegetable):
                  "Biscuits", "Pie", "Crepes", "Pudding","Cheesecake", "Cake", "Bars"]
                  
     # p = inflect.engine() ####Singular/plural
+    # Mettre meat en premier puis fish..
+
 
     for keys in data:
         list1 =[i for item in [data[keys]["title"]] for i in item.split()]
-        list2 = set(list1)&set(fruit) # we don't need to list3 to actually be a list
+        list2 = set(list1)&set(fruit)
         list4 = sorted(list2, key = lambda k : list1.index(k))
 
         if len(list4)!=0:
