@@ -21,8 +21,8 @@ import json
 import pickle
 import random
 from datetime import date
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
 #Welcome message
 today = date.today()
