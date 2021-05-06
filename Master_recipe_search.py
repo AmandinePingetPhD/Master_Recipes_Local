@@ -1,4 +1,4 @@
-#### Master Cook - IA de suggestion de recettes v0 #####
+#### Master Cook - IA de suggestion de recettes v1- with search #####
 #Python 3.7.1
 #Coding Utf-8
 
@@ -76,6 +76,7 @@ def fonction_master_cook(data, today):
                 print(data[keys]['title'])
                 found_recipe = True
                 # print(data[keys])
+                ####Liste des choix numérotés puis demande de choix puis affichage de la/les recettes choisies
         if found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
