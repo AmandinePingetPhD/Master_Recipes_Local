@@ -116,7 +116,7 @@ def fonction_master_cook(data, today):
                 found_recipe = True
                 # print(data[keys])
         if found_recipe == False:
-            search = input("I'm sorry, I haven't found what you're looking for. Another try? (Y/N)")
+            search = input("\n", "I'm sorry, I haven't found what you're looking for. Another try? (Y/N)", "\n")
             if (search=='Y' or search=='y'):
                 search_recipe(data)
         #     else:
@@ -153,7 +153,7 @@ def fonction_master_cook(data, today):
         """
         Demande si besoin d'une autre recette
         """
-        choice = input("Do you want another recipe? Y/N ")
+        choice = input(" \n Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
             fonction_master_cook(data,today)    
