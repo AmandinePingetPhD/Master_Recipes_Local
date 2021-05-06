@@ -108,15 +108,17 @@ def fonction_master_cook(data, today):
         """
         Recherche de recette par mot clé
         """
+        found_recipe = False
         key_w = input("What are you looking for? Please enter a recipe key-word: ")
         for keys in data:
             if key_w in data[keys]['title']:
                 print(data[keys]['title'])
+                found_recipe = True
                 # print(data[keys])
-        # if key_w not in data[keys]['title']:
-        #     search = input("I'm sorry, I haven't found what you're loooking for. Another try? (Y/N)")
-        #     if (search=='Y' or search=='y'):
-        #         search_recipe(data)
+        if found_recipe == False:
+            search = input("I'm sorry, I haven't found what you're looking for. Another try? (Y/N)")
+            if (search=='Y' or search=='y'):
+                search_recipe(data)
         #     else:
         #         print("Good bye, see you later ;)", "\n")
         ### Impression + export éventuel à améliorer
