@@ -73,12 +73,15 @@ def fonction_master_cook(data, today):
         key_w = input("What are you looking for? Please enter a recipe key-word: ")
         for keys in data:
             if key_w in data[keys]['title']:
-                print(data[keys]['title'])
+                print(data[keys]['RecipeId'], data[keys]['title'])
                 found_recipe = True
-                # print(data[keys])
-                ####Liste des choix numérotés puis demande de choix puis affichage de la/les recettes choisies
-                ###Alternative : une recette qui correspond au hasard et ensuite demander si recette convient, 
-                # donc si autre recette ou pas ?
+        print("\n")
+        numero = input("What recipe number do you want?")
+        print("\n")
+        num = int(numero)
+        recipe = lecture_info_recette(num, data)
+        print_recette(num, recipe)
+
         if found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
@@ -95,11 +98,11 @@ def fonction_master_cook(data, today):
                 break
         return recipe
 
-    def print_recette(num, recipe, current_season):
+    def print_recette(num, recipe):
         """
         Impression de la recette choisie
         """    
-        print("As today is,",today,", I suggest you a",current_season,"recipe : ",recipe['title'])
+        print("As today is,",today,", I suggest you : ",recipe['title'])
         print("Recipe Number : ", num)
         print("\n")
         print("Ingredients :")
@@ -126,10 +129,10 @@ def fonction_master_cook(data, today):
     if (search=='Y' or search=='y'):
         search_recipe(data)
     else:   
-        current_season = seasonality(today)
+        # current_season = seasonality(today)
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
-        print_recette(num, recipe, current_season)
+        print_recette(num, recipe)
     ask_another_recipe()
    
 
