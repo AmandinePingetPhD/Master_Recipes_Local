@@ -23,3 +23,7 @@ Améliorer l'export des recettes
 Classifier par plat/dessert/boisson
 
 Demander le type de plat => Faire une recherche par type de plat / ingrtédient? 
+
+Interface graphique à prévoir?
+
+Sous forme de chatbot ? 
