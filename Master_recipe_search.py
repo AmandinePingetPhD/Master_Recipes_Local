@@ -55,6 +55,8 @@ def fonction_master_cook(data, today):
         #Check if capitalized :> right format
         if key_w.islower()==True:
             key_w = key_w.capitalize()
+        elif key_w.isupper()==True:
+            key_w = key_w.capitalize()
 
         for keys in data:
             if key_w in data[keys]['title']:
