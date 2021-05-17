@@ -51,6 +51,10 @@ def fonction_master_cook(data, today):
         """
         found_recipe = False
         key_w = input("What are you looking for? Please enter a recipe key-word: ")
+        ###Check if 1st letter in capital / if not: capitalize
+        if key_w.islower()==True:
+            key_w = key_w.capitalize()
+
         for keys in data:
             if key_w in data[keys]['title']:
                 print(data[keys]['RecipeId'], data[keys]['title'])
@@ -59,6 +63,7 @@ def fonction_master_cook(data, today):
         if found_recipe == True:
             numero = input("What recipe number do you want?")
             print("\n")
+            
             num = int(numero)
             recipe = lecture_info_recette(num, data)
             print_recette(num, recipe)
