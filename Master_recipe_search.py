@@ -18,7 +18,6 @@ os.chdir(newPath)
 ####Import packages
 
 import json
-import pickle
 import random
 from datetime import date
 # import pandas as pd
@@ -37,25 +36,6 @@ def fonction_master_cook(data, today):
     """
     Fonction principale 
     """
-
-    def seasonality(today):
-        """
-        Prise en compte de la date du jour et de la saison pour la suggestion de recette
-        """
-        #today de la forme 2021-03-11
-        thisYear = today.year
-
-        #Def des saisons
-        seasons =  [('winter', (date(thisYear, 1, 1), date(thisYear, 3, 20))),
-                    ('spring', (date(thisYear, 3, 21), date(thisYear, 6, 20))),
-                    ('summer', (date(thisYear, 6, 21), date(thisYear, 9, 20))),
-                    ('autumn', (date(thisYear, 9, 21), date(thisYear, 12, 20))),
-                    ('winter', (date(thisYear, 12, 21), date(thisYear, 12, 31)))]
-
-        current_season = next(season for season, (start, end) in seasons if start <= today <= end)
-
-        return current_season
-       
 
     def choix_recette():
         """
@@ -76,13 +56,14 @@ def fonction_master_cook(data, today):
                 print(data[keys]['RecipeId'], data[keys]['title'])
                 found_recipe = True
         print("\n")
-        numero = input("What recipe number do you want?")
-        print("\n")
-        num = int(numero)
-        recipe = lecture_info_recette(num, data)
-        print_recette(num, recipe)
+        if found_recipe == True:
+            numero = input("What recipe number do you want?")
+            print("\n")
+            num = int(numero)
+            recipe = lecture_info_recette(num, data)
+            print_recette(num, recipe)
 
-        if found_recipe == False:
+        elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
                 search_recipe(data)
@@ -129,7 +110,6 @@ def fonction_master_cook(data, today):
     if (search=='Y' or search=='y'):
         search_recipe(data)
     else:   
-        # current_season = seasonality(today)
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
         print_recette(num, recipe)
