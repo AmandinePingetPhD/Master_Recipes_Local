@@ -23,7 +23,7 @@ import random
 import pandas as pd
 import numpy as np
 from json.decoder import JSONDecodeError
-import inflect
+import inflect #Sing/plur only
 
 #Import des recettes
 with open('recipes_raw_result.json') as jsonfile:
