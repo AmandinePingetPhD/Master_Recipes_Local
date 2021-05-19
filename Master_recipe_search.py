@@ -58,6 +58,8 @@ def fonction_master_cook(data, today):
         elif key_w.isupper()==True:
             key_w = key_w.capitalize()
 
+        #To do : si plusieurs mots recherchés : "Sweet potato" par exemple : à voir
+
         for keys in data:
             if key_w in data[keys]['title']:
                 print(data[keys]['RecipeId'], data[keys]['title'])
