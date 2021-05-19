@@ -20,8 +20,7 @@ os.chdir(newPath)
 import json
 import random
 from datetime import date
-# import pandas as pd
-# import numpy as np
+
 
 #Welcome message
 today = date.today()
@@ -51,6 +50,7 @@ def fonction_master_cook(data, today):
         """
         found_recipe = False
         key_w = input("What are you looking for? Please enter a recipe key-word: ")
+        
         ###Check if 1st letter in capital / if not: capitalize
         #Check if capitalized :> right format
         if key_w.islower()==True:
