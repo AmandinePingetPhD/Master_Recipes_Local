@@ -10,6 +10,8 @@ Affichage du titre de la recette quand recherche d'ingrédients
 
 Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
 
+Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
+
 Prise en compte de la date du jour pour la recette
 
 Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
