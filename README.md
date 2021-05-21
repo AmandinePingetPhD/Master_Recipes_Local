@@ -22,8 +22,14 @@ Améliorer l'export des recettes
 
 Classifier par plat/dessert/boisson
 
-Demander le type de plat => Faire une recherche par type de plat / ingrtédient? 
+Demander le type de plat => Faire une recherche par type de plat / ingrédient? Ingrédient dans titre Ok
 
-Interface graphique à prévoir?
+Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes? 
+
+Gestion de base de données pour version en ligne : à implémenter - JSON 
+
+Interface graphique à prévoir? Django? Autre Python? Javascript?
+
+Dessins/templates libre de droit - chef cuisine ok / template à trouver
 
 Sous forme de chatbot ? 
