@@ -20,7 +20,7 @@ os.chdir(newPath)
 import json
 import random
 from datetime import date
-
+import re
 
 #Welcome message
 today = date.today()
@@ -49,16 +49,21 @@ def fonction_master_cook(data, today):
         Recherche de recette par mot clé dans le titre uniquement
         """
         found_recipe = False
-        key_w = input("What are you looking for? Please enter a recipe key-word: ")
+        key_words = input("What are you looking for? Please enter a recipe key-word: ")
         
-        ###Check if 1st letter in capital / if not: capitalize
-        #Check if capitalized :> right format
-        if key_w.islower()==True:
-            key_w = key_w.capitalize()
-        elif key_w.isupper()==True:
-            key_w = key_w.capitalize()
+        # Check if 1st letter in capital / if not: capitalize
+        # Check if capitalized :> right format
+        # For loop for each term : multiple word search
 
-        #To do : si plusieurs mots recherchés : "Sweet potato" par exemple : à voir
+        key_sep = key_words.split()
+        key_w = ''
+
+        for word in key_sep:
+            if word.islower()==True:
+                key_w += word.capitalize()
+            elif key_w.isupper()==True:
+                key_w += word.capitalize()
+        key_w = re.sub(r"(\w)([A-Z])", r"\1 \2", key_w)
 
         for keys in data:
             if key_w in data[keys]['title']:
