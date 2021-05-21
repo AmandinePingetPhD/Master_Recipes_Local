@@ -4,9 +4,9 @@ Fonction de suggestion de recettes
 
 v0 : Aléatoire sur les 39 517 recettes + demande si autre recette à choisir
 
-Search ingrédient ajouté
+Search ingrédient ajouté + plusieurs termes de recherche possibles
 
-Affichage du titre de la recette quand recherche d'ingrédients 
+Affichage du titre de la recette quand recherche d'ingrédients
 
 Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
 
