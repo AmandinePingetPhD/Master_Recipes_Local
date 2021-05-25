@@ -1,5 +1,5 @@
 #### Master Cook - IA de suggestion de recettes v0 #####
-#Python 3.7.1
+#Python 3.8.5
 #Coding Utf-8
 
 """
@@ -7,26 +7,21 @@ Fonction de suggestion de recettes
 @author : Amandine Pinget, PhD
 """
 
+#Initialisation
 import os
 import sys
-
 fileDir = os.path.dirname(os.path.abspath(__file__))
 newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
 os.chdir(newPath)
 
-####Import packages
-
+#Import packages
 import json
 import random
 from datetime import date
 # import pickle
 # import pandas as pd
 # import numpy as np
-
-#Welcome message
-today = date.today()
-print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 #Import des recettes
 with open('recipes_raw_result.json', 'r') as f: ####bonne db à importer
@@ -36,6 +31,10 @@ with open('recipes_raw_result.json', 'r') as f: ####bonne db à importer
 # global table_season
 # table_season = pickle.load(open("table_season.pkl", "rb"))
 # print(table_season)
+
+#Welcome message
+today = date.today()
+print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 def fonction_master_cook(data, today):
