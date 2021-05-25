@@ -1,5 +1,5 @@
 #### Master Cook - IA de suggestion de recettes v1- with search #####
-#Python 3.7.1
+#Python 3.8.5
 #Coding Utf-8
 
 """
@@ -7,28 +7,27 @@ Fonction de suggestion de recettes
 @author : Amandine Pinget, PhD
 """
 
+#Initialisation
 import os
 import sys
-
 fileDir = os.path.dirname(os.path.abspath(__file__))
 newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
 os.chdir(newPath)
 
-####Import packages
-
+#Import packages
 import json
 import random
 from datetime import date
 import re
 
-#Welcome message
-today = date.today()
-print("\n", "Hello Ama, what do you want to cook today?", "\n")
-
 #Import des recettes
 with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
+
+#Welcome message
+today = date.today()
+print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 def fonction_master_cook(data, today):
