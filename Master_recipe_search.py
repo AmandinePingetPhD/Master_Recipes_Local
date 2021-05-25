@@ -27,7 +27,7 @@ today = date.today()
 print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 #Import des recettes
-with open('recipes_raw_result.json', 'r') as f: ####bonne db à importer
+with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
 
 
