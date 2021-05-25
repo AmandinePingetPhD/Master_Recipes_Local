@@ -18,9 +18,9 @@ os.chdir(newPath)
 ####Import packages
 
 import json
-import pickle
 import random
 from datetime import date
+# import pickle
 # import pandas as pd
 # import numpy as np
 
