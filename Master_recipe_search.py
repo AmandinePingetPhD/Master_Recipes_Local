@@ -25,9 +25,8 @@ import re
 with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
 
-#Welcome message
+#Date du jour 
 today = date.today()
-print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 def fonction_master_recipe(data, today):
@@ -67,11 +66,14 @@ def fonction_master_recipe(data, today):
                 key_w += word
         key_w = re.sub(r"(\w)([A-Z])", r"\1 \2", key_w)
 
+        #Recherche du/des mots-clés dans le titre et impression des recettes résultats
         for keys in data:
             if key_w in data[keys]['title']:
                 print(data[keys]['RecipeId'], data[keys]['title'])
                 found_recipe = True
         print("\n")
+
+        #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
         if found_recipe == True:
             numero = input("What recipe number do you want?")
             print("\n")
@@ -80,7 +82,6 @@ def fonction_master_recipe(data, today):
             num = int(numero)
             recipe = lecture_info_recette(num, data)
             print_recette(num, recipe)
-
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
@@ -91,6 +92,7 @@ def fonction_master_recipe(data, today):
         Identification et lecture des infos liées aux recettes
         """
         recipe = {}
+        #Recette identifiée avec composants et mise dans le dictionnaire pour affichage
         for keys in data:
             if num == data[keys]['RecipeId']:
                 recipe = data[keys]
@@ -101,6 +103,9 @@ def fonction_master_recipe(data, today):
         """
         Impression de la recette choisie
         """    
+        #Impression titre puis ingrédients avec tirets et instructions
+        #Tenir compte du jour pour versions futures au niveau des suggestions
+
         print("As today is,",today,", I suggest you : ",recipe['title'])
         print("Recipe Number : ", num)
         print("\n")
@@ -112,10 +117,13 @@ def fonction_master_recipe(data, today):
         print(recipe['instructions'])
         print("\n")
 
+        ##### Export à voir sous un certain format? Modalités? Mail? Historique à garder? 
+
     def ask_another_recipe():
         """
         Demande si besoin d'une autre recette
         """
+        #Boucle et suggère d'autres recettes si besoin sinon exit
         choice = input(" \n Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
@@ -123,14 +131,25 @@ def fonction_master_recipe(data, today):
         else:
             print("Good bye, see you later ;)", "\n")
 
+
+    ####Exécution du programme
+    
+    #Welcome message : personnalisation avec demande du prénom pour futur programme?
+    print("\n", "Hello Ama, what do you want to cook today?", "\n")
+
+    #Demande si recherche d'ingrédient/recette particulière
     search = input("Do you want to search a special recipe? Y/N ")
     print("\n")
+
+    #Si oui: fonction de search
     if (search=='Y' or search=='y'):
         search_recipe(data)
-    else:   
+    else:   #Si non: recette choisie au hasard
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
         print_recette(num, recipe)
+
+    #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
     ask_another_recipe()
    
 
