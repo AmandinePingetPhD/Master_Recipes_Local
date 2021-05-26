@@ -1,4 +1,4 @@
-#### Master Cook - IA de suggestion de recettes v1- with search #####
+#### Master Cook - IA de suggestion de recettes v1- avec search #####
 #Python 3.8.5
 #Coding Utf-8
 
@@ -15,7 +15,7 @@ newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
 os.chdir(newPath)
 
-#Import packages
+#Import des packages
 import json
 import random
 from datetime import date
@@ -30,7 +30,7 @@ today = date.today()
 print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
-def fonction_master_cook(data, today):
+def fonction_master_recipe(data, today):
     """
     Fonction principale 
     """
@@ -40,6 +40,7 @@ def fonction_master_cook(data, today):
         Première version avec choix aléatoire de recette suivant ID/numéro de recette
         """
         num = 0
+        # Recettes numérotée de 1 à 39517
         num = random.randint(1,39517)
         return num
 
@@ -50,9 +51,9 @@ def fonction_master_cook(data, today):
         found_recipe = False
         key_words = input("What are you looking for? Please enter a recipe key-word: ")
         
-        # Check if 1st letter in capital / if not: capitalize
-        # Check if capitalized :> right format
-        # For loop for each term : multiple word search
+        # Vérifier si la première lettre est en majuscule : sinon : mettre en majuscule
+        # Vérifier si tout en majuscule : si c'est cas : mettre juste première lettre
+        # Boucle for pour recherche avec des plusieurs mots : "sweet potato"
 
         key_sep = key_words.split()
         key_w = ''
@@ -60,8 +61,10 @@ def fonction_master_cook(data, today):
         for word in key_sep:
             if word.islower()==True:
                 key_w += word.capitalize()
-            elif key_w.isupper()==True:
+            elif word.isupper()==True:
                 key_w += word.capitalize()
+            else:
+                key_w += word
         key_w = re.sub(r"(\w)([A-Z])", r"\1 \2", key_w)
 
         for keys in data:
@@ -116,7 +119,7 @@ def fonction_master_cook(data, today):
         choice = input(" \n Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
-            fonction_master_cook(data,today)    
+            fonction_master_recipe(data,today)    
         else:
             print("Good bye, see you later ;)", "\n")
 
@@ -133,7 +136,7 @@ def fonction_master_cook(data, today):
 
 def main():
 
-    fonction_master_cook(data, today)    
+    fonction_master_recipe(data, today)    
 
 if __name__ == "__main__":
     main()
