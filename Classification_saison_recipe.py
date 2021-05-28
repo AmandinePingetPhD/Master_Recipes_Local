@@ -59,11 +59,16 @@ def classification_recipe(data, table_season, fruit, vegetable):
     Fonction de classification par saison des recettes 
     """
 
+    #Plusieurs classifications/caractérisation des recettes à effectuer:
+    ## - type de plat : salé, sucré, boisson
+    ## - contenu : végétarien, viande, poisson, fruits...
+    ## - chaud/froid
+    ## - saison : printemps, été, automne, hiver 
+
     # interrogation de la base de données recette :
     # passage en revue de chaque recette au niveau du titre/des ingrédients
     # si fruit et légumes id à base table_season : recette de la saison des fruits/légumes
     # écrire la saison dans le fichier JSON
-    #    'Fruit': str, 'Vegetable': str})
    
     meat = ["Chicken", "Beef", "Turkey", "Meetloaf"]
     # egg = ["Egg"] ####To improve
