@@ -1,5 +1,5 @@
 #### Master Cook - IA de suggestion de recettes v0 #####
-#Python 3.7.1
+#Python 3.8.5
 #Coding Utf-8
 
 """
@@ -19,7 +19,6 @@ os.chdir(newPath)
 
 import json
 import pickle
-import random
 import pandas as pd
 import numpy as np
 from json.decoder import JSONDecodeError
