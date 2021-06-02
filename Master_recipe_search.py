@@ -28,6 +28,10 @@ with open('recipes_raw_result.json', 'r') as f:
 #Date du jour 
 today = date.today()
 
+#Welcome message : personnalisation avec demande du prénom pour futur programme?
+print("\n", "Hello Ama, what do you want to cook today?", "\n")
+
+
 
 def fonction_master_recipe(data, today):
     """
@@ -134,9 +138,6 @@ def fonction_master_recipe(data, today):
 
     ####Exécution du programme
     
-    #Welcome message : personnalisation avec demande du prénom pour futur programme?
-    print("\n", "Hello Ama, what do you want to cook today?", "\n")
-
     #Demande si recherche d'ingrédient/recette particulière
     search = input("Do you want to search a special recipe? Y/N ")
     print("\n")
