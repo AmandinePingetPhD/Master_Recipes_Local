@@ -122,6 +122,7 @@ def fonction_master_recipe(data, today):
         print("\n")
 
         ##### Export à voir sous un certain format? Modalités? Mail? Historique à garder? 
+        #### Carnet de recettes avec historique? Rating si recette testée? A voir...
 
     def ask_another_recipe():
         """
