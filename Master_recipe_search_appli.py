@@ -13,9 +13,14 @@ import sys
 import ssl
 
 import pywebio
+from pywebio.input import *
+from pywebio.output import *
+from pywebio import start_server
+
 fileDir = os.path.dirname(os.path.abspath(__file__))
 newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
+
 os.chdir(newPath)
 entries = os.listdir(newPath)
 
@@ -24,9 +29,6 @@ import json
 import random
 from datetime import date
 import re
-from pywebio.input import *
-from pywebio.output import *
-from pywebio import start_server
 
 #Import des recettes
 with open('recipes_raw_result.json', 'r') as f:
@@ -38,7 +40,7 @@ today = date.today()
 #####Title
 put_markdown('## Welcome to Master Recipe!')
 
-
+os.chdir(newPath)
 img = open('chief1.jpg', 'rb').read() #or 'cook_hat.jpg' / 'chief1.jpg'
 put_image(img, width='200px')
 
@@ -132,7 +134,7 @@ def fonction_master_recipe(data, today):
         """    
         #Impression titre puis ingrédients avec tirets et instructions
         #Tenir compte du jour pour versions futures au niveau des suggestions
-
+        
         put_text("As today is,",today,", I suggest you : ",recipe['title'])
         put_text("Recipe Number : ", num)
         put_text("\n")
