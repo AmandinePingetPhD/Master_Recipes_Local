@@ -1,5 +1,5 @@
 #### Master Cook - IA de suggestion de recettes v1- avec search #####
-#Python 3.8.5
+#Python 3.9.5
 #Coding Utf-8
 
 """
@@ -23,8 +23,8 @@ import json
 import random
 from datetime import date
 import re
-from pywebio.input import input, FLOAT
-from pywebio.output import put_text
+from pywebio.input import *
+from pywebio.output import *
 from pywebio import start_server
 
 #Import des recettes
