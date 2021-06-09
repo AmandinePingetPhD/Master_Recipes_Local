@@ -17,6 +17,7 @@ fileDir = os.path.dirname(os.path.abspath(__file__))
 newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
 os.chdir(newPath)
+entries = os.listdir(newPath)
 
 #Import des packages
 import json
@@ -33,6 +34,15 @@ with open('recipes_raw_result.json', 'r') as f:
 
 #Date du jour 
 today = date.today()
+
+#####Title
+put_markdown('## Welcome to Master Recipe!')
+
+for img in entries:
+    if img.endswith(".jpg"):
+        image = random.choice(entries)
+        put_image(open(image, 'rb').read())
+        break
 
 #Welcome message : personnalisation avec demande du prénom pour futur programme?
 put_text("\n", "Hello Ama, what do you want to cook today?", "\n")
