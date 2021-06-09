@@ -38,11 +38,18 @@ today = date.today()
 #####Title
 put_markdown('## Welcome to Master Recipe!')
 
-for img in entries:
-    if img.endswith(".jpg"):
-        image = random.choice(entries)
-        put_image(open(image, 'rb').read())
-        break
+
+img = open('chief1.jpg', 'rb').read() #or 'cook_hat.jpg' / 'chief1.jpg'
+put_image(img, width='200px')
+
+# for im in entries:
+#     if im.endswith(".jpg"):
+#         image = random.choice(entries)
+#         img = open(image, 'rb').read()
+#         put_image(img, width='200px')
+#         break
+#     else :
+#         continue
 
 #Welcome message : personnalisation avec demande du prénom pour futur programme?
 put_text("\n", "Hello Ama, what do you want to cook today?", "\n")
