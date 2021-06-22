@@ -182,7 +182,7 @@ def fonction_master_recipe(data, today):
 
 def main():
 
-    pywebio.start_server(fonction_master_recipe(data, today), port=80)    
+    pywebio.start_server(fonction_master_recipe(data, today), port=80)    #AssertionError : application type NoneType
 
 if __name__ == "__main__":
     main()
