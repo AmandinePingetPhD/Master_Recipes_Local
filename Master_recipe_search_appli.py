@@ -178,7 +178,10 @@ def fonction_master_recipe(data, today):
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
     ask_another_recipe()
-   
+    
+    ### Improve print
+    ### Rating recipes?
+    ### Random choice when special ingredient or ask another complementary?
 
 def main():
 
