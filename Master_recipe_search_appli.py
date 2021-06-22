@@ -37,8 +37,8 @@ with open('recipes_raw_result.json', 'r') as f:
 #Date du jour 
 today = date.today()
 
-#####Title
-put_markdown('## Welcome to Master Recipe!')
+#####Titles
+put_markdown('## Welcome to Master Recipes!')
 
 os.chdir(newPath)
 img = open('chief1.jpg', 'rb').read() #or 'cook_hat.jpg' / 'chief1.jpg'
@@ -181,7 +181,7 @@ def fonction_master_recipe(data, today):
     
     ### Improve print
     ### Rating recipes?
-    ### Random choice when special ingredient or ask another complementary?
+    ### Random choice when special ingredient or ask another complementary?elcome
 
 def main():
 
