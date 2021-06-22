@@ -1,4 +1,4 @@
-# Master_Recipes
+# Master Recipes
 
 ![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes/blob/4efaa09bfe8488401f3fcd69b38ab75adf38e8fb/Welcome_Master-Recipe.png)
 
