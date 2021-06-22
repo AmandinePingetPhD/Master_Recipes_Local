@@ -1,6 +1,6 @@
 # Master_Recipes
 
-![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes/blob/afcc1f5c6585ef7c881d60aa67f282941f056b64/Welcome_Master-Recipe.png)
+![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes/blob/4efaa09bfe8488401f3fcd69b38ab75adf38e8fb/Welcome_Master-Recipe.png)
 
 Fonction de suggestion de recettes
 
