@@ -19,8 +19,8 @@ os.chdir(newPath)
 
 import json
 import pickle
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 from json.decoder import JSONDecodeError
 import inflect #Sing/plur only
 
