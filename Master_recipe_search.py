@@ -20,10 +20,19 @@ import json
 import random
 from datetime import date
 import re
+import pickle
+# import pandas
+# import numpy
 
 #Import des recettes
 with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
+
+#Import de la table de conversion cup/grammes
+global conversion_table
+conversion_table = pickle.load(open("conversion_table.pkl", "rb"))
+print(conversion_table)
+
 
 #Date du jour 
 today = date.today()
