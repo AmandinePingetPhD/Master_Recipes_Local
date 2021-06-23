@@ -31,7 +31,7 @@ with open('recipes_raw_result.json', 'r') as f:
 #Import de la table de conversion cup/grammes
 global conversion_table
 conversion_table = pickle.load(open("conversion_table.pkl", "rb"))
-print(conversion_table)
+# print(conversion_table)
 
 
 #Date du jour 
