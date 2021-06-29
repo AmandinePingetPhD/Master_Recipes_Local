@@ -137,7 +137,7 @@ def fonction_master_recipe(data, today):
 
     # def read_quantity():
     #     """
-    #     Lecture des quantité et transformation en float si fraction
+    #     Lecture des quantité et transformation en float si fraction pour conversion en unités métriques
     #     """
     
     # return 
