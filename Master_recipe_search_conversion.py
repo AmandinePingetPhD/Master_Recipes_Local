@@ -100,6 +100,7 @@ def fonction_master_recipe(data, today):
             if (search=='Y' or search=='y'):
                 search_recipe(data)
 
+
     def lecture_info_recette(num, data):
         """
         Identification et lecture des infos liées aux recettes
@@ -112,6 +113,26 @@ def fonction_master_recipe(data, today):
                 break
         return recipe
 
+
+        # def conversion_metric(recipe):
+        #     """
+        #     Fonction de conversion des cup/ounces...en grammes 
+        #     """
+            # Boucle sur les ingrédients? 
+            # si unknown => pas de conversion mais identique 
+            # for el in recipe['ingredients']:
+            # Extraire les quantités uniquement...
+            
+            # def read_quantity():
+        #     """
+        #     Lecture des quantité et transformation en float si fraction pour conversion en unités métriques
+        #     """
+        
+            # return 
+
+        # return recipe_converted
+
+    
     def print_recette(num, recipe):
         """
         Impression de la recette choisie
@@ -158,6 +179,7 @@ def fonction_master_recipe(data, today):
     else:   #Si non: recette choisie au hasard
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
+        ###Demander si conversion à réaliser ou pas? 
         print_recette(num, recipe)
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
