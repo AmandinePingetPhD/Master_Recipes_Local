@@ -122,6 +122,10 @@ def fonction_master_recipe(data, today):
             # si unknown => pas de conversion mais identique 
             # for el in recipe['ingredients']:
             # Extraire les quantités uniquement...
+            # nltk pour tokenization? 
+            # import nltk
+            # sentence = "Hello! Good morning."
+            # tokens = nltk.word_tokenize(sentence)
             
             # def read_quantity():
         #     """
