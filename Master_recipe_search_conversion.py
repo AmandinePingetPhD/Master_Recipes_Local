@@ -88,12 +88,18 @@ def fonction_master_recipe(data, today):
 
         #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
         if found_recipe == True:
-            numero = input("What recipe number do you want?")
+            numero = input("What recipe number do you want? ")
             print("\n")
             while (numero.isnumeric()!=True or int(numero)>39517):
                 numero = input("Recipe number is invalid! Could you please enter another recipe number?")
             num = int(numero)
             recipe = lecture_info_recette(num, data)
+            ###Demander si conversion à réaliser ou pas? 
+            convers = input("Do you prefer ingredients in metric units (grams,...)? Y/N ")
+            print("\n")
+            if (convers=='Y' or convers=='y'):
+                print("Ingredients will be converted in metric units.", "\n")
+                #### fonction de conversion :  recipe_converted = conversion_metric(recipe)
             print_recette(num, recipe)
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
@@ -168,7 +174,7 @@ def fonction_master_recipe(data, today):
         if (choice=='Y' or choice=='y'):
             fonction_master_recipe(data,today)    
         else:
-            print("Good bye, see you later ;)", "\n")
+            print("Have a nice cooking time and meal! Good bye, see you later ;)", "\n")
 
 
     ####Exécution du programme
@@ -184,9 +190,10 @@ def fonction_master_recipe(data, today):
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
         ###Demander si conversion à réaliser ou pas? 
-        convers = input("Do you prefer ingredients in metric units (grams,...)? Y/N")
+        convers = input("Do you prefer ingredients in metric units (grams,...)? Y/N ")
+        print("\n")
         if (convers=='Y' or convers=='y'):
-            print("Recipe's ingredients will be converted in metric units.", "\n")
+            print("Ingredients will be converted in metric units.", "\n")
             #### fonction de conversion :  recipe_converted = conversion_metric(recipe)
         print_recette(num, recipe)
 
