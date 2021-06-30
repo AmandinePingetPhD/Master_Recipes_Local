@@ -21,6 +21,9 @@ import random
 from datetime import date
 import re
 import pickle
+import nltk
+import math
+from fractions import Fraction
 # import pandas
 # import numpy
 
@@ -99,7 +102,8 @@ def fonction_master_recipe(data, today):
             print("\n")
             if (convers=='Y' or convers=='y'):
                 print("Ingredients will be converted in metric units.", "\n")
-                #### fonction de conversion :  recipe_converted = conversion_metric(recipe)
+                #### fonction de conversion 
+                recipe = conversion_metric(recipe)
             print_recette(num, recipe)
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
@@ -120,27 +124,35 @@ def fonction_master_recipe(data, today):
         return recipe
 
 
-        # def conversion_metric(recipe):
-        #     """
-        #     Fonction de conversion des cup/ounces...en grammes 
-        #     """
-            # Boucle sur les ingrédients? 
-            # si unknown => pas de conversion mais identique 
-            # for el in recipe['ingredients']:
-            # Extraire les quantités uniquement...
-            # nltk pour tokenization? 
-            # import nltk
-            # sentence = "Hello! Good morning."
-            # tokens = nltk.word_tokenize(sentence)
-            
-            # def read_quantity():
-        #     """
-        #     Lecture des quantité et transformation en float si fraction pour conversion en unités métriques
-        #     """
-        
-            # return 
+    def conversion_metric(recipe):
+        """
+        Fonction de conversion des cup/ounces...en grammes 
+        """
+    #     # Boucle sur les ingrédients? 
+    #     # si unknown => pas de conversion mais identique 
+    #     conversion_table
+    # si nombre + fraction : calcul à faire
+    # si contenu paquet + unité entre parenthèses : négliger premier nombre?
 
-        # return recipe_converted
+        for el in recipe['ingredients']:
+            tokens = nltk.word_tokenize(el)
+            if tokens[0].isdigit() : #si nombre
+                print(tokens[0])
+            else: #si fraction : calcul et float en résultat
+                values = tokens[0].split('/') 
+                if len(values) == 2 and all(i.isdigit() for i in values) :
+                    resultat = float(Fraction(int(values[0]), int(values[1])))
+                    print (values, resultat)
+                    #récup dans une var pour affichage
+
+    # recherche sur unités + ingrédients à convertir? => correspondance avec conversion_table
+
+    #     # Extraire les quantités uniquement...
+    #     Fractions? et si autres nombres qu'en position 0?
+    #      Différents cas : int, fraction, texte
+
+    # Return : recette avec quantités + unités modifiées
+        return recipe
 
     
     def print_recette(num, recipe):
@@ -194,7 +206,8 @@ def fonction_master_recipe(data, today):
         print("\n")
         if (convers=='Y' or convers=='y'):
             print("Ingredients will be converted in metric units.", "\n")
-            #### fonction de conversion :  recipe_converted = conversion_metric(recipe)
+            #### fonction de conversion 
+            recipe = conversion_metric(recipe)
         print_recette(num, recipe)
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
