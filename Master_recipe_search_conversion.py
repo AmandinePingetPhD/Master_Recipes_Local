@@ -140,7 +140,7 @@ def fonction_master_recipe(data, today):
             quant = []
             for j in range(len(tokens)):
                 if tokens[j].isdigit() : #si nombre
-                    quant.append(tokens[j])
+                    quant.append(int(tokens[j]))
                     print(quant) #stockage sous forme de string
                 else: #si fraction : calcul et float en résultat
                     values = tokens[j].split('/') 
@@ -151,7 +151,7 @@ def fonction_master_recipe(data, today):
                         #récup dans une var pour affichage
                 ### introduire si '(' et ')' avec nombre et unité : négliger le premier nombre : supprimer de quant
     # recherche sur unités + ingrédients à convertir? => correspondance avec conversion_table
-
+    # float? si dans liste
     #     # Extraire les quantités uniquement...
     #     Fractions? et si autres nombres qu'en position 0?
     #      Différents cas : int, fraction, texte
