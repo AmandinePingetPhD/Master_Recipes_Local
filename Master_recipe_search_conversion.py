@@ -143,11 +143,14 @@ def fonction_master_recipe(data, today):
                     quant.append(int(tokens[j]))
                     print(quant) #stockage sous forme de string
                 else: #si fraction : calcul et float en résultat
-                    values = tokens[j].split('/') 
+                    values = tokens[j].split('/')
                     if len(values) == 2 and all(i.isdigit() for i in values) :
                         resultat = float(Fraction(int(values[0]), int(values[1])))
                         quant.append(resultat) # append float 
                         print (values, resultat, quant)
+                        res = 0
+                        res = sum(quant)
+                        print(res)
                         #récup dans une var pour affichage
                 ### introduire si '(' et ')' avec nombre et unité : négliger le premier nombre : supprimer de quant
     # recherche sur unités + ingrédients à convertir? => correspondance avec conversion_table
