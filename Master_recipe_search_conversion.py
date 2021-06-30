@@ -184,6 +184,10 @@ def fonction_master_recipe(data, today):
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
         ###Demander si conversion à réaliser ou pas? 
+        convers = input("Do you prefer ingredients in metric units (grams,...)? Y/N")
+        if (convers=='Y' or convers=='y'):
+            print("Recipe's ingredients will be converted in metric units.", "\n")
+            #### fonction de conversion :  recipe_converted = conversion_metric(recipe)
         print_recette(num, recipe)
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
