@@ -133,31 +133,35 @@ def fonction_master_recipe(data, today):
     #     conversion_table
     # si nombre + fraction : calcul à faire
     # si contenu paquet + unité entre parenthèses : négliger premier nombre?
+    # impression de la recette au fur et à mesure des conversions
 
         for el in recipe['ingredients']:
             tokens = nltk.word_tokenize(el)
             j = 0
             quant = []
             for j in range(len(tokens)):
-                if tokens[j].isdigit() : #si nombre
-                    quant.append(int(tokens[j]))
+                try:
+                    float(tokens[j])
+                    quant.append(float(tokens[j]))
                     print(quant) #stockage sous forme de string
-                else: #si fraction : calcul et float en résultat
-                    values = tokens[j].split('/')
-                    if len(values) == 2 and all(i.isdigit() for i in values) :
-                        resultat = float(Fraction(int(values[0]), int(values[1])))
-                        quant.append(resultat) # append float 
-                        print (values, resultat, quant)
-                        res = 0
-                        res = sum(quant)
-                        print(res)
-                        #récup dans une var pour affichage
-                ### introduire si '(' et ')' avec nombre et unité : négliger le premier nombre : supprimer de quant
+                except ValueError:
+                    if tokens[j] == '(': ### introduire si '(' et ')' avec nombre et unité 
+                        try:
+                            quant = [] #: négliger le premier nombre : supprimer de quant
+                        except ValueError:
+                            continue
+                    else: #si fraction : calcul et float en résultat
+                        values = tokens[j].split('/')
+                        if len(values) == 2 and all(i.isdigit() for i in values) :
+                            resultat = float(Fraction(int(values[0]), int(values[1])))
+                            quant.append(resultat) # append float 
+                            print (values, resultat, quant)
+                            res = 0
+                            res = sum(quant)
+                            print(res)
+        
     # recherche sur unités + ingrédients à convertir? => correspondance avec conversion_table
-    # float? si dans liste
-    #     # Extraire les quantités uniquement...
-    #     Fractions? et si autres nombres qu'en position 0?
-    #      Différents cas : int, fraction, texte
+    # Différents cas : int, fraction, texte
 
     # Return : recette avec quantités + unités modifiées
         return recipe
