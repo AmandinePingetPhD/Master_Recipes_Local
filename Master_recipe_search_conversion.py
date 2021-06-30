@@ -137,16 +137,19 @@ def fonction_master_recipe(data, today):
         for el in recipe['ingredients']:
             tokens = nltk.word_tokenize(el)
             j = 0
+            quant = []
             for j in range(len(tokens)):
                 if tokens[j].isdigit() : #si nombre
-                    print(tokens[j])
+                    quant.append(tokens[j])
+                    print(quant) #stockage sous forme de string
                 else: #si fraction : calcul et float en résultat
                     values = tokens[j].split('/') 
                     if len(values) == 2 and all(i.isdigit() for i in values) :
                         resultat = float(Fraction(int(values[0]), int(values[1])))
-                        print (values, resultat)
+                        quant.append(resultat) # append float 
+                        print (values, resultat, quant)
                         #récup dans une var pour affichage
-
+                ### introduire si '(' et ')' avec nombre et unité : négliger le premier nombre : supprimer de quant
     # recherche sur unités + ingrédients à convertir? => correspondance avec conversion_table
 
     #     # Extraire les quantités uniquement...
