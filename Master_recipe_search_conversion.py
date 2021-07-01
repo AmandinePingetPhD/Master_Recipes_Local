@@ -133,13 +133,16 @@ def fonction_master_recipe(data, today):
     #     conversion_table
     # si nombre + fraction : calcul à faire
     # si contenu paquet + unité entre parenthèses : négliger premier nombre?
+    # si unité à convertir : conversion sinon ignorer ne pas changer les quantités?
+    # considérer les unités au singulier? "cup" au lieu de "cups"
+    # catégories liquide pour cup: "milk", "water"
     # impression de la recette au fur et à mesure des conversions
 
         for el in recipe['ingredients']:
             tokens = nltk.word_tokenize(el)
             j = 0
             quant = []
-            for j in range(len(tokens)):
+            for j in range(len(tokens)): #int ou float : quantité
                 try:
                     float(tokens[j])
                     quant.append(float(tokens[j]))
