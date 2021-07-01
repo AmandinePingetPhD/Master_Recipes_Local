@@ -4,6 +4,9 @@ Metric,Metric_Unit,US_Unit,State,Ingredients
 15,ml,tablespoon / tablespoons,Liquid,Liquid
 28,g,ounce / ounces,Solid,Solid
 448,g,lb / pounds / pound,Solid,Solid
+128,g,cup chopped,Solid,Solid
+110,g,cup grated,Solid,Solid
+122,g,cup strips / cup sliced,Solid,Solid
 150,g,cup,Solid,Flour
 200,g,cup,Solid,Caster / Granulated / Brown Sugar
 125,g,cup,Solid,Icing Sugar
