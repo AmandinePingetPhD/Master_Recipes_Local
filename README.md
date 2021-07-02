@@ -9,8 +9,10 @@ Search ingrédient ajouté + plusieurs termes de recherche possibles dans le tit
 Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
 Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
 
+
 En cours :
 Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...)
+
 
 A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
