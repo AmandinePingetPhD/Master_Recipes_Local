@@ -5,13 +5,14 @@
 Fonction de suggestion de recettes
 
 v0 : Aléatoire sur les 39 517 recettes + demande si autre recette à choisir
-
-Search ingrédient ajouté + plusieurs termes de recherche possibles
-
-Affichage du titre de la recette quand recherche d'ingrédients
-
+Search ingrédient ajouté + plusieurs termes de recherche possibles dans le titre
+Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
 Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
 
+En cours :
+Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...)
+
+A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
 
 Prise en compte de la date du jour pour la recette
