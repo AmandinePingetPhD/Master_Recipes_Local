@@ -16,27 +16,15 @@ Conversion des unités impériales (cup, pounds,...) en unités métriques (g, m
 
 A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
-
 Prise en compte de la date du jour pour la recette
-
 Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
-
 Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
-
 Classification en cours selon plat avec légumes, viande, poisson, dessert, dessert avec fruits...
-
 Améliorer l'export des recettes
-
 Classifier par plat/dessert/boisson
-
 Demander le type de plat => Faire une recherche par type de plat / ingrédient? Ingrédient dans titre Ok
-
 Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes? 
-
 Gestion de base de données pour version en ligne : à implémenter - JSON 
-
 Interface graphique à prévoir? Django? Autre Python? Javascript?
-
 Dessins/templates libre de droit - chef cuisine ok / template à trouver
-
 Sous forme de chatbot ? 
