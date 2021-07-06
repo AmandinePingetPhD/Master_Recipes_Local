@@ -8,14 +8,17 @@ v0 : Aléatoire sur les 39 517 recettes + demande si autre recette à choisir
 Search ingrédient ajouté + plusieurs termes de recherche possibles dans le titre
 Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
 Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
+Affichage de la date du jour
 
 
 En cours :
 Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...)
-
+Ajout d'un historique des recettes imprimées?
 
 A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
+Affichage d'une recette aléatoire issue du Search? puis demander si la recette convient ou autre choix aléatoire?
+Ajout du search sur plusieurs ingrédients : affiner les résultats + moins de recettes
 Prise en compte de la date du jour pour la recette
 Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
 Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
