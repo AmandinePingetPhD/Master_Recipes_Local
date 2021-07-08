@@ -31,3 +31,5 @@ Gestion de base de données pour version en ligne : à implémenter - JSON
 Interface graphique à prévoir? Django? Autre Python? Javascript?
 Dessins/templates libre de droit - chef cuisine ok / template à trouver
 Sous forme de chatbot ? 
+
+Fun fact : la base de données a des recettes pour chiens : catégorie à part / bonus?
