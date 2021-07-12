@@ -106,11 +106,13 @@ def fonction_master_recipe(data, today):
 
         #Choix aléatoire sur les recettes solution? proposer autre choix sinon si premeir choix aléatoire pas satisfaisant?
         if found_recipe == True:
-            alea = input("Do you want a random choice? (Y/N)")
+            alea = input("Do you want a random choice for your recipe? (Y/N)")
             if (alea=='Y' or alea=='y'):
                 num = random.choice(lres)
                 recipe = lecture_info_recette(num, data)
                 print_recette(num, recipe)
+                # oth = input("Do you want another random choice for your recipe? (Y/N)") #autres choix aléatoire? Utile ou pas?
+
                 #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
             else :
                 numero = input("What recipe number do you want?")
