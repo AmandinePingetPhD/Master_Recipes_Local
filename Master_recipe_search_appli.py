@@ -95,22 +95,31 @@ def fonction_master_recipe(data, today):
                 key_w += word
         key_w = re.sub(r"(\w)([A-Z])", r"\1 \2", key_w)
 
+        lres = []
         #Recherche du/des mots-clés dans le titre et impression des recettes résultats
         for keys in data:
             if key_w in data[keys]['title']:
+                lres.append(data[keys]['RecipeId'])
                 put_text(data[keys]['RecipeId'], data[keys]['title'])
                 found_recipe = True
         put_text("\n")
 
-        #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
+        #Choix aléatoire sur les recettes solution? proposer autre choix sinon si premeir choix aléatoire pas satisfaisant?
         if found_recipe == True:
-            numero = input("What recipe number do you want?")
-            put_text("\n")
-            while (numero.isnumeric()!=True or int(numero)>39517):
-                numero = input("Recipe number is invalid! Could you please enter another recipe number?")
-            num = int(numero)
-            recipe = lecture_info_recette(num, data)
-            print_recette(num, recipe)
+            alea = input("Do you want a random choice? (Y/N)")
+            if (alea=='Y' or alea=='y'):
+                num = random.choice(lres)
+                recipe = lecture_info_recette(num, data)
+                print_recette(num, recipe)
+                #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
+            else :
+                numero = input("What recipe number do you want?")
+                put_text("\n")
+                while (numero.isnumeric()!=True or int(numero)>39517):
+                    numero = input("Recipe number is invalid! Could you please enter another recipe number?")
+                num = int(numero)
+                recipe = lecture_info_recette(num, data)
+                print_recette(num, recipe)
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
