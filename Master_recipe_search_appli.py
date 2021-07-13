@@ -112,8 +112,7 @@ def fonction_master_recipe(data, today):
                 recipe = lecture_info_recette(num, data)
                 print_recette(num, recipe)
                 alea = input("Do you want another random choice for your recipe? (Y/N)") #autres choix aléatoire? Utile ou pas?
-
-                #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
+            #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
             else :
                 numero = input("What recipe number do you want?")
                 put_text("\n")
