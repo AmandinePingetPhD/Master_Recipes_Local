@@ -7,12 +7,13 @@ Fonction de suggestion de recettes
 v0 : Aléatoire sur les 39 517 recettes + demande si autre recette à choisir
 Search ingrédient ajouté + plusieurs termes de recherche possibles dans le titre
 Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
-Affichage quand recherche par ingrédients : Choix du numéro de recette et affichage de la recette
+Affichage quand recherche par ingrédients : Recette au hasard (avec bouvle) puis choix du numéro de recette et affichage de la recette
 Affichage de la date du jour
 
 
 En cours :
-Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...)
+Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...) => Création d'une nouvelle base avec unités metriques 
+puis appel à base impériale/métrique suivant choix?
 Ajout d'un historique des recettes imprimées?
 
 A faire : 
