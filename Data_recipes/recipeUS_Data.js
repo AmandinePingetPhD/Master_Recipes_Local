@@ -7,3 +7,5 @@ class recipeUS {
         this.RecipeId = RecipeId;
         }
 }
+
+/// Switch/Case peut être utile pour classif?
