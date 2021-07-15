@@ -1,5 +1,5 @@
 #### Master Cook - IA de suggestion de recettes v1- avec search #####
-#Python 3.8.5
+#Python 3.9.6
 #Coding Utf-8
 
 """
