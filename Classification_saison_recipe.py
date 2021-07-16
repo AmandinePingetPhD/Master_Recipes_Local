@@ -3,7 +3,7 @@
 #Coding Utf-8
 
 """
-Fonction de classification des recettes par saison
+Fonction de classification des recettes par saison et autre
 @author : Amandine Pinget, PhD
 """
 
@@ -22,7 +22,7 @@ import pickle
 # import pandas as pd
 # import numpy as np
 from json.decoder import JSONDecodeError
-import inflect #Sing/plur only
+#import inflect #Sing/plur only
 
 #Import des recettes
 with open('recipes_raw_result.json') as jsonfile:
