@@ -1,4 +1,11 @@
-//// Node JS file for JSON BDD Recipes
+/// Master Cook - IA de suggestion de recettes - Modif BDD JSON ///
+// Javascript Node Js
+// Coding Utf-8
+
+/*
+Node JS file for JSON BDD Recipes
+@author : Amandine Pinget, PhD
+*/
 
 //Import de la BDD
 const fs = require('fs')
