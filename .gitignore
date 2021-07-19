@@ -148,3 +148,4 @@ recipes_raw_result - Copie.json
 recipes_raw_result_classif.json
 recipes_raw_result_classif2.json
 *.pkl
+*.code-workspace
