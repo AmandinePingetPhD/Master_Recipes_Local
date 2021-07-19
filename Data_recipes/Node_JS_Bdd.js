@@ -18,6 +18,10 @@ console.log(recipes)
 //Modifications / Ajouts 
 let donnees = JSON.stringify(personne)
 
+fs.writeFile('personne2.json', donnees, function(erreur) {
+    if (erreur) {
+        console.log(erreur)}
+})
 // fs.appendFile
 
 // fs.writeFileSync('personnage2.json', donnees)
