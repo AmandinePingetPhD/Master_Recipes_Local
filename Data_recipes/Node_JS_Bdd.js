@@ -7,6 +7,16 @@ Node JS file for JSON BDD Recipes
 @author : Amandine Pinget, PhD
 */
 
+class recipes {
+    constructor(title, ingredients, instructions, t_recipe, RecipeId) {
+        this.title = title;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+        this.t_recipe = t_recipe;
+        this.RecipeId = RecipeId;
+        }
+}
+
 //Import de la BDD
 const fs = require('fs')
 let fichier = fs.readFileSync('recipes_raw_result.json')
@@ -15,10 +25,23 @@ let recipes = JSON.parse(fichier)
 //Affichage
 console.log(recipes)
 
-//Modifications / Ajouts 
-let donnees = JSON.stringify(personne)
+//Tests et classification
+switch (recipes.title)
+{
+    case "Doggie":
+    case "Doggy":
+    case "Dog Treats":
+    case "Dog Biscuits":
+    case "Dog Food":
+    case "Good Dog":
+        console.log('Dog recipe', recipes.RecipeId);
+        break;
+}
 
-fs.writeFile('personne2.json', donnees, function(erreur) {
+//Modifications / Ajouts 
+// let donnees = JSON.stringify(personne)
+
+fs.writeFile('recipe_new.json', donnees, function(erreur) {
     if (erreur) {
         console.log(erreur)}
 })
