@@ -151,4 +151,4 @@ recipes_raw_result_classif2.json
 *.code-workspace
 *.json
 list_recipe_unknown.txt
-Data_recipes/recipes_raw_result.json
+./Data_recipes/recipes_raw_result.json
