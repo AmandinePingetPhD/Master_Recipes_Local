@@ -52,51 +52,60 @@ def classification_recipe(data):
     
     fruit = ["Fruit", "Hazelnuts", "Walnuts", "Chestnuts", "Grapefruit", 
             "Lemon", "Orange", "Tangerine", "Apricot", "Mango",
-            "Pineapple", "Rhubarb", "Strawberry", "Blackberry",
+            "Pineapple", "Rhubarb", "Strawberry", "Strawberries", "Blackberry",
             "Cherry", "Blueberry", "Nectarine", "Peach", "Plum",
             "Raspberry", "Watermelon", "Apple", "Apples", "Cranberry", "Fig",
-            "Grape", "Pear", "Pomegranate", "Quince", "Banana", "Kiwi", "Berry"]
+            "Grape", "Pear", "Pomegranate", "Quince", "Quinces", "Banana", "Bananas", "Kiwi",
+            "Berry", "Applesauce", "Almond", "Almonds", "Coconut", "Pecans"]
 
     vegetable = ["Vegetable", "Kale", "Leek", "Radicchio", "Radish", "Rutabaga", 
             "Turnip", "Sprouts", "Beetroot", "Red Cabbage",
             "Avocado", "Artichoke", "Asparagus", "Spinach", "Carrot", "Carrots",
             "Pepperoni", "Celeriac", "Chive", "Collard", "Pea", "Fava Bean", 
             "Fennel", "Fiddlehead", "Morel", "Mustard", "Eggplant",
-            "Tomato", "Tomatoes", "Corn", "Broccoli", "Cucumber", "Bean", "Beans", "Zucchini",
+            "Tomato", "Tomatoes", "Corn", "Broccoli", "Cucumber", "Cucumbers", "Bean", "Beans", "Zucchini",
             "Celery", "Butternut", "Cauliflower", "Garlic", "Mushroom", "Mushrooms",
             "Potato", "Potatoes", "Pumpkin", "Sweet Potato", "Chard", "Chicory",
             "Pak Choi", "Onion", "Salad", "Guacamole", "Veggie", "Rice", "Peppers", 
             "Lentil", "Hummus", "Lettuce", "Vegetables", "Vegetarian", "Veggies",
             "Fries", "Cabbage", "Ratatouille", "Squash", "Orzo", "Beets", "Quinoa", 
-            "Gazpacho", "Soup", "Dahl", "BLT", "Minestrone"]
+            "Gazpacho", "Soup", "Dahl", "BLT", "Minestrone", "Colcannon", "Slaw", 
+            "Chickpea", "Romaine", "Coleslaw", "Peas"]
    
     meat = ["Chicken", "Chicken-Rotisserie", "Beef", "Turkey","Rib", "Ribs", "Meatloaf", "Meatloaves",
     "Meatball","Meatballs", "Lamb", "Meat", "Pork", "Pig", "Steak", "Steaks", "Quail", "Rabbit", "Poultry", "Sausage",
      "Sirloin", "Bacon", "Filet", "Pollo", "Scallops", "Chili", "Taco", "Enchiladas", "Jambalaya", "Goulash", 
-     "Carne", "Stew", "Ham", "Wings", "Osso"]
+     "Carne", "Stew", "Ham", "Wings", "Osso", "Roast", "Sloppy", "Mahi", "Duck", "Brisket", "Prosciutto", 
+     "Casserole", "Cooker", "Quiche", "Dumplings", "Gravy", "Moussaka"]
 
-    egg = ["Egg", "Eggs", "Omelet"] ####To improve
+    egg = ["Egg", "Eggs", "Omelet"]
 
     fish = ["Fish", "Seafood", "Salmon", "Shrink", "Cod", "Halibut", "Trout", "Crab","Crabs",
-     "Tilapia", "Shrimp", "Tuna", "Shells", "Clam", "Crabby", "Lobster", "Oysters"] #####To improve
+     "Tilapia", "Shrimp", "Tuna", "Shells", "Clam", "Crabby", "Lobster", "Oysters", "Prawns", 
+     "Mussels", "Haddock", "Sea"]
 
-    drink = ["Water", "Juice", "Tea", "Lemonade", "Sangria", "Punch", "Creamy Hot Cocoa", "Beer", "Eggnog", "Grog", 
-    "Shake", "Margarita", "Smoothie", "Chai", "Colada"]
+    drink = ["Water", "Juice", "Tea", "Lemonade", "Sangria", "Punch", "Cocoa", "Beer", "Eggnog", "Grog", 
+    "Shake", "Margarita", "MArgarityas", "Smoothie", "Chai", "Colada", "Hop", "Mojito"]
 
     dessert = ["Creme", "Chocolate", "Granola", "Brownies", "Brownie",
-                 "Cookie","Cookies", "Pancakes", "Bread", "Muffins", "Waffles", 
-                 "Biscuits", "Pie", "Pies", "Crepes", "Pudding","Cheesecake", "Cake", "Milk Cake",
+                 "Cookie","Cookies", "Pancake", "Pancakes", "Bread", "Muffins", "Muffin", "Waffles", 
+                 "Biscuits", "Pie", "Pies", "Crepes", "Pudding","Cheesecake", "Cake", "Cakes",
                   "Bars", "Snickerdoodles", "Cinnabon", "Truffles", "Smokies", "Scones", 
                   "Popcorn", "Fudge", "Cinnamon", "Rolls", "Baklava", "Tiramisu", "Gingerbread",
-                 "Macaroons", "Cupcakes", "Toffee", "Cheesecakes", "Biscotti", "Flan", "Zuppa", "Frosting", 
-                 "Icing", "Puffs", "Fondant", "Shortbread", "Brookies", "Tart", "Flake", "Candy", "Oatmeal"]
+                 "Macaroons", "Cupcakes", "Cu^pcake", "Toffee", "Cheesecakes", "Biscotti", "Flan", "Zuppa", "Frosting", 
+                 "Icing", "Puffs", "Fondant", "Shortbread", "Brookies", "Tart", "Flake", "Candy", "Oatmeal", 
+                 "French Toast", "Cronuts", "Chia", "Oats", "Crookies", "Marshmallow", "Snaps", "Doughnuts", 
+                 "Glaze", "Beignets"]
 
-    pizza = ["Pizza"]
+    pizza = ["Pizza", "Calzones"]
 
-    pasta = ["Mac", "Lasagna", "Pasta", "Spaghetti", "Macaroni", "Noodles", "Fettuccine", "Penne", "Spaetzle", 
-    "Ravioli", "Vermicelli"]
+    sandwich =["Sandwich", "Burger", "Burgers", "Hot Dog", "Sandwiches", "Wraps", "Hamburger", "Hamburgers", "Buns"]
 
-    side_dish = ["Cornbread", "Naan", "Sauce", "Pretzels", "Pretzel", "Baguettes", "Bread", "Dressing", "Seasoning", "Focaccia"]
+    pasta = ["Mac", "Lasagna", "Pasta", "Spaghetti", "Macaroni", "Noodles", "Noodle", "Fettuccine", "Fettuccini", "Penne", "Spaetzle", 
+    "Ravioli", "Vermicelli", "Ziti", "Tortellini", "Linguine", "Gnocchi", "Manicotti"]
+
+    side_dish = ["Cornbread", "Naan", "Sauce", "Pretzels", "Pretzel", "Baguettes", "Bread", "Dressing", "Seasoning", 
+    "Focaccia", "Spread", "Vinaigrette", "Toast", "Crust", "Salsa", "Bruschetta", "Cream", "Antipasto", "Sticks", "Appetizer", "Dip"]
 
     doggie = ["Doggie", "Doggy", "Dog Treats", "Dog Biscuits", "Dog Food", "Good Dog"]
                  
@@ -155,15 +164,24 @@ def classification_recipe(data):
                                             if len(is_sdish)!=0:
                                                 data[keys].update({"t_recipe": "Side Dish"}) #Accompagnement
                                             else:
-                                                title_dog = set(list_title)&set(doggie)
-                                                is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
-                                                if len(is_doggie)!=0:
-                                                    data[keys].update({"t_recipe": "Recipes for dogs"}) #Recettes pour chien
+                                                title_sandwich = set(list_title)&set(sandwich)
+                                                is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
+                                                if len(is_sandwich)!=0:
+                                                    data[keys].update({"t_recipe": "Sandwich"}) #Sandwich / Burger /Hot Dog
                                                 else:
-                                                    data[keys].update({"t_recipe": "Unknown"})
+                                                    title_dog = set(list_title)&set(doggie)
+                                                    is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
+                                                    if len(is_doggie)!=0:
+                                                        data[keys].update({"t_recipe": "Recipes for dogs"}) #Recettes pour chien
+                                                    else:
+                                                        data[keys].update({"t_recipe": "Unknown"})
         list_title = []
-        sys.stdout = open("list_recipe3.txt", "a")
+        sys.stdout = open("list_recipe_prog.txt", "a")
         print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+        sys.stdout = open("list_recipe_unknown.txt", "a")
+        if data[keys]['t_recipe']=="Unknown":
+            print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+    sys.stdout.close()
     sys.stdout.close()
 
     # ####classif chaud / froid
