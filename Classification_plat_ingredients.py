@@ -114,7 +114,7 @@ def classification_recipe(data):
 
     for keys in data:
         if data[keys]['t_recipe'] == "Unknown":
-            list_title = [i for item in data[keys]["ingredients"] for i in item.split()] #Dans le titre seulement
+            list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans le titre seulement
             # classification_recipe(data, list_title)
             # data[keys].update({"t_recipe": "Unknown"})
             for word in list_title:
