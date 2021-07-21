@@ -32,7 +32,7 @@ with open('recipes_raw_result.json') as jsonfile:
         data = json.loads(Rawdata)
     except JSONDecodeError as e:
         print('Decoding JSON has failed', e)
-
+####Voir si pgm ok et cause du temps mis à exec
 
 def classification_recipe(data):
     """
