@@ -51,78 +51,69 @@ def classification_recipe(data):
     # écrire la saison dans le fichier JSON
 
     
-    fruit = ["Fruit", "Hazelnuts", "Walnuts", "Chestnuts", "Grapefruit", 
-            "Lemon", "Orange", "Tangerine", "Apricot", "Mango",
-            "Pineapple", "Rhubarb", "Strawberry", "Strawberries", "Blackberry",
-            "Cherry", "Blueberry", "Nectarine", "Peach", "Plum",
-            "Raspberry", "Watermelon", "Apple", "Apples", "Cranberry", "Fig",
-            "Grape", "Pear", "Pomegranate", "Quince", "Quinces", "Banana", "Bananas", "Kiwi",
-            "Berry", "Applesauce", "Almond", "Almonds", "Coconut", "Pecans"]
+    fruit = ['fruit', 'hazelnuts', 'walnuts', 'chestnuts', 'grapefruit', 'lemon', 'orange', 
+            'tangerine', 'apricot', 'mango', 'pineapple', 'rhubarb', 'strawberry', 'strawberries',
+            'blackberry', 'cherry', 'blueberry', 'nectarine', 'peach', 'plum', 'raspberry', 
+            'watermelon', 'apple', 'apples', 'cranberry', 'fig', 'grape', 'pear', 'pomegranate',
+            'quince', 'quinces', 'banana', 'bananas', 'kiwi', 'berry', 'applesauce', 'almond', 
+            'almonds', 'coconut', 'pecans', 'peaches', 'grapes', 'blueberries']
 
-    vegetable = ["Vegetable", "Kale", "Leek", "Radicchio", "Radish", "Rutabaga", 
-            "Turnip", "Sprouts", "Beetroot", "Red Cabbage",
-            "Avocado", "Artichoke", "Asparagus", "Spinach", "Carrot", "Carrots",
-            "Pepperoni", "Celeriac", "Chive", "Collard", "Pea", "Fava Bean", 
-            "Fennel", "Fiddlehead", "Morel", "Mustard", "Eggplant",
-            "Tomato", "Tomatoes", "Corn", "Broccoli", "Cucumber", "Cucumbers", "Bean", "Beans", "Zucchini",
-            "Celery", "Butternut", "Cauliflower", "Garlic", "Mushroom", "Mushrooms",
-            "Potato", "Potatoes", "Pumpkin", "Sweet Potato", "Chard", "Chicory",
-            "Pak Choi", "Onion", "Salad", "Guacamole", "Veggie", "Rice", "Peppers", 
-            "Lentil", "Hummus", "Lettuce", "Vegetables", "Vegetarian", "Veggies",
-            "Fries", "Cabbage", "Ratatouille", "Squash", "Orzo", "Beets", "Quinoa", 
-            "Gazpacho", "Soup", "Dahl", "BLT", "Minestrone", "Colcannon", "Slaw", 
-            "Chickpea", "Romaine", "Coleslaw", "Peas"]
+    vegetable = ['vegetable', 'kale', 'leek', 'radicchio', 'radish', 'rutabaga', 'turnip', 'sprouts', 
+                'beetroot', 'red cabbage', 'avocado', 'artichoke', 'asparagus', 'spinach', 'carrot', 
+                'carrots', 'pepperoni', 'celeriac', 'chive', 'collard', 'pea', 'fava bean', 'fennel', 
+                'fiddlehead', 'morel', 'mustard', 'eggplant', 'tomato', 'tomatoes', 'corn', 'broccoli', 
+                'cucumber', 'cucumbers', 'bean', 'beans', 'zucchini', 'celery', 'butternut', 'cauliflower', 
+                'garlic', 'mushroom', 'mushrooms', 'potato', 'potatoes', 'pumpkin', 'sweet potato', 'chard', 
+                'chicory', 'pak choi', 'onion', 'salad', 'guacamole', 'veggie', 'rice', 'peppers', 'lentil', 
+                'hummus', 'lettuce', 'vegetables', 'vegetarian', 'veggies', 'fries', 'cabbage', 'ratatouille', 
+                'squash', 'orzo', 'beets', 'quinoa', 'gazpacho', 'soup', 'dahl', 'blt', 'minestrone', 'colcannon', 
+                'slaw', 'chickpea', 'romaine', 'coleslaw', 'peas', 'horseradish', 'okra', 'edamame', 'artichokes',
+                'kohlrabi', 'beet', 'beets', 'radishes', 'onions', 'yam', 'tempeh', 'plantains', 'plantain', 'fiddleheads']
    
-    meat = ["Chicken", "Chicken-Rotisserie", "Beef", "Turkey","Rib", "Ribs", "Meatloaf", "Meatloaves",
-    "Meatball","Meatballs", "Lamb", "Meat", "Pork", "Pig", "Steak", "Steaks", "Quail", "Rabbit", "Poultry", "Sausage",
-     "Sirloin", "Bacon", "Filet", "Pollo", "Scallops", "Chili", "Taco", "Enchiladas", "Jambalaya", "Goulash", 
-     "Carne", "Stew", "Ham", "Wings", "Osso", "Roast", "Sloppy", "Mahi", "Duck", "Brisket", "Prosciutto", 
-     "Casserole", "Cooker", "Quiche", "Dumplings", "Gravy", "Moussaka"]
+    meat = ['chicken', 'chicken-rotisserie', 'beef', 'turkey', 'rib', 'ribs', 'meatloaf', 'meatloaves', 'meatball',
+            'meatballs', 'lamb', 'meat', 'pork', 'pig', 'steak', 'steaks', 'quail', 'rabbit', 'poultry', 
+            'sausage', 'sirloin', 'bacon', 'filet', 'pollo', 'scallops', 'chili', 'taco', 'enchiladas', 
+            'jambalaya', 'goulash', 'carne', 'stew', 'ham', 'wings', 'osso', 'roast', 'sloppy', 'mahi', 
+            'duck', 'brisket', 'prosciutto', 'casserole', 'cooker', 'quiche', 'dumplings', 'gravy', 'moussaka']
 
-    egg = ["Egg", "Eggs", "Omelet"]
+    egg = ['egg', 'eggs', 'omelet']
 
-    fish = ["Fish", "Seafood", "Salmon", "Shrink", "Cod", "Halibut", "Trout", "Crab","Crabs",
-     "Tilapia", "Shrimp", "Tuna", "Shells", "Clam", "Crabby", "Lobster", "Oysters", "Prawns", 
-     "Mussels", "Haddock", "Sea"]
+    fish = ['fish', 'seafood', 'salmon', 'shrink', 'cod', 'halibut', 'trout', 'crab', 'crabs', 'tilapia', 'shrimp', 
+            'tuna', 'shells', 'clam', 'crabby', 'lobster', 'oysters', 'prawns', 'mussels', 'haddock', 'sea', 'clams', 
+            'crawfish']
 
-    drink = ["Water", "Juice", "Tea", "Lemonade", "Sangria", "Punch", "Cocoa", "Beer", "Eggnog", "Grog", 
-    "Shake", "Margarita", "MArgarityas", "Smoothie", "Chai", "Colada", "Hop", "Mojito"]
+    drink = ['water', 'juice', 'tea', 'lemonade', 'sangria', 'punch', 'cocoa', 'beer', 'eggnog', 'grog', 'shake',
+             'margarita', 'margaritas', 'smoothie', 'chai', 'colada', 'hop', 'mojito', 'tequila', 'milk', 'vodka',
+             'whiskey', 'vermouth', 'mint', 'wine', 'drink', 'soda', 'rum', 'limeade', 'beverage', 'liqueur', 'champagne',
+             'coffee', 'nectar', 'water', 'ale', 'ice']
 
-    dessert = ["Creme", "Chocolate", "Granola", "Brownies", "Brownie",
-                 "Cookie","Cookies", "Pancake", "Pancakes", "Bread", "Muffins", "Muffin", "Waffles", 
-                 "Biscuits", "Pie", "Pies", "Crepes", "Pudding","Cheesecake", "Cake", "Cakes",
-                  "Bars", "Snickerdoodles", "Cinnabon", "Truffles", "Smokies", "Scones", 
-                  "Popcorn", "Fudge", "Cinnamon", "Rolls", "Baklava", "Tiramisu", "Gingerbread",
-                 "Macaroons", "Cupcakes", "Cu^pcake", "Toffee", "Cheesecakes", "Biscotti", "Flan", "Zuppa", "Frosting", 
-                 "Icing", "Puffs", "Fondant", "Shortbread", "Brookies", "Tart", "Flake", "Candy", "Oatmeal", 
-                 "French Toast", "Cronuts", "Chia", "Oats", "Crookies", "Marshmallow", "Snaps", "Doughnuts", 
-                 "Glaze", "Beignets"]
+    dessert = ['creme', 'chocolate', 'granola', 'brownies', 'brownie', 'cookie', 'cookies', 'pancake', 'pancakes',
+            'bread', 'muffins', 'muffin', 'waffles', 'biscuits', 'pie', 'pies', 'crepes', 'pudding', 'cheesecake', 
+            'cake', 'cakes', 'bars', 'snickerdoodles', 'cinnabon', 'truffles', 'smokies', 'scones', 'popcorn', 'fudge', 
+            'cinnamon', 'rolls', 'baklava', 'tiramisu', 'gingerbread', 'macaroons', 'cupcakes', 'cupcake', 'toffee', 
+            'cheesecakes', 'biscotti', 'flan', 'zuppa', 'frosting', 'icing', 'puffs', 'fondant', 'shortbread', 'brookies',
+            'tart', 'flake', 'candy', 'oatmeal', 'french toast', 'cronuts', 'chia', 'oats', 'crookies', 'marshmallow', 'snaps', 
+            'doughnuts', 'glaze', 'beignets', 'birthday', 'chocolate', 'sugar', 'honey', 'marshmallows', 'flour', 'cereal', 
+            'jellybeans', 'caramels', 'figs']
 
-    pizza = ["Pizza", "Calzones"]
+    pizza = ['pizza', 'calzones']
 
-    sandwich =["Sandwich", "Burger", "Burgers", "Hot Dog", "Sandwiches", "Wraps", "Hamburger", "Hamburgers", "Buns"]
+    sandwich = ['sandwich', 'burger', 'burgers', 'hot dog', 'sandwiches', 'wraps', 'hamburger', 'hamburgers', 'buns']
 
-    pasta = ["Mac", "Lasagna", "Pasta", "Spaghetti", "Macaroni", "Noodles", "Noodle", "Fettuccine", "Fettuccini", "Penne", "Spaetzle", 
-    "Ravioli", "Vermicelli", "Ziti", "Tortellini", "Linguine", "Gnocchi", "Manicotti"]
+    pasta = ['mac', 'lasagna', 'pasta', 'spaghetti', 'macaroni', 'noodles', 'noodle', 'fettuccine', 'fettuccini', 'penne', 
+            'spaetzle', 'ravioli', 'vermicelli', 'ziti', 'tortellini', 'linguine', 'gnocchi', 'manicotti']
 
-    side_dish = ["Cornbread", "Naan", "Sauce", "Pretzels", "Pretzel", "Baguettes", "Bread", "Dressing", "Seasoning", 
-    "Focaccia", "Spread", "Vinaigrette", "Toast", "Crust", "Salsa", "Bruschetta", "Cream", "Antipasto", "Sticks", "Appetizer", "Dip"]
+    side_dish = ['cornbread', 'naan', 'sauce', 'pretzels', 'pretzel', 'baguettes', 'bread', 'dressing', 'seasoning',
+                 'focaccia', 'spread', 'vinaigrette', 'toast', 'crust', 'salsa', 'bruschetta', 'cream', 'antipasto', 
+                 'sticks', 'appetizer', 'dip', 'paprika', 'cheese', 'baguette', 'sesame', 'olive', 'olives']
 
-    doggie = ["Doggie", "Doggy", "Dog Treats", "Dog Biscuits", "Dog Food", "Good Dog"]
+    doggie = ['doggie', 'doggy', 'dog treats', 'dog biscuits', 'dog food', 'good dog']
                  
     # p = inflect.engine() ####Singular/plural
 
     for keys in data:
-        if data[keys]['t_recipe'] == "Unknown":
-            list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans le titre seulement
-            # classification_recipe(data, list_title)
-            # data[keys].update({"t_recipe": "Unknown"})
-            for word in list_title:
-                if word.islower()==True:
-                    list_title += word.capitalize()
-                else:
-                    list_title += word
-            list_title = re.sub(r"(\w)([A-Z])", r"\1 \2", list_title)
+        if data[keys]['t_recipe'] == "Unknown": #Uniquement si "Unknown"
+            list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans les ingrédients
             title_fruit = set(list_title)&set(fruit)
             is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
             if len(is_fruit)!=0:
