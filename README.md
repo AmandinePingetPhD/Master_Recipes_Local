@@ -9,12 +9,14 @@ Search ingrédient ajouté + plusieurs termes de recherche possibles dans le tit
 Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
 Affichage quand recherche par ingrédients : Recette au hasard (avec bouvle) puis choix du numéro de recette et affichage de la recette
 Affichage de la date du jour
+Catégorisation des recettes par types : plat avec légumes, viande, poisson, dessert, boisson....
 
 
 En cours :
 Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...) => Création d'une nouvelle base avec unités metriques 
 puis appel à base impériale/métrique suivant choix?
 Ajout d'un historique des recettes imprimées?
+Introduire les catégories
 
 A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
@@ -23,7 +25,7 @@ Ajout du search sur plusieurs ingrédients : affiner les résultats + moins de r
 Prise en compte de la date du jour pour la recette
 Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
 Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
-Classification en cours selon plat avec légumes, viande, poisson, dessert, dessert avec fruits...
+Classification à affiner : plat / dessert, salé, sucré... saisonnalité...
 Améliorer l'export des recettes
 Classifier par plat/dessert/boisson
 Demander le type de plat => Faire une recherche par type de plat / ingrédient? Ingrédient dans titre Ok
