@@ -28,7 +28,7 @@ from fractions import Fraction
 # import numpy
 
 #Import des recettes
-with open('recipes_raw_result.json', 'r') as f:
+with open('recipes_data.json', 'r') as f:
     data = json.load(f)
 
 #Import de la table de conversion cup/grammes

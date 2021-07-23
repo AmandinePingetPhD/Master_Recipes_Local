@@ -31,7 +31,7 @@ from datetime import date
 import re
 
 #Import des recettes
-with open('recipes_raw_result.json', 'r') as f:
+with open('recipes_data.json', 'r') as f:
     data = json.load(f)
 
 #Date du jour 

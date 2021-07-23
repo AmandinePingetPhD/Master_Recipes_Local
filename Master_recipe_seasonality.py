@@ -24,7 +24,7 @@ from datetime import date
 # import numpy as np
 
 #Import des recettes
-with open('recipes_raw_result.json', 'r') as f: ####bonne db à importer
+with open('recipes_data.json', 'r') as f: ####bonne db à importer
     data = json.load(f)
 
 #Import de la bdd saisonalité des fruits et légumes
