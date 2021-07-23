@@ -100,7 +100,7 @@ def fonction_master_recipe(data, today):
         for keys in data:
             if key_w in data[keys]['title']:
                 lres.append(data[keys]['RecipeId'])
-                put_text(data[keys]['RecipeId'], data[keys]['title'])
+                put_text(data[keys]['RecipeId'], "-", data[keys]['title'], "-", data[keys]['t_recipe'])
                 found_recipe = True
         put_text("\n")
 
@@ -145,7 +145,7 @@ def fonction_master_recipe(data, today):
         #Impression titre puis ingrédients avec tirets et instructions
         #Tenir compte du jour pour versions futures au niveau des suggestions
         
-        put_text("As today is,",today,", I suggest you : ",recipe['title'])
+        put_text("As today is,",today,", I suggest you : ", recipe['title'], "-", recipe['t_recipe'])
         put_text("Recipe Number : ", num)
         put_text("\n")
         put_text("Ingredients :")

@@ -82,7 +82,7 @@ def fonction_master_recipe(data, today):
         #Recherche du/des mots-clés dans le titre et impression des recettes résultats
         for keys in data:
             if key_w in data[keys]['title']:
-                print(data[keys]['RecipeId'], data[keys]['title'])
+                print(data[keys]['RecipeId'], "-", data[keys]['title'], "-", data[keys]['t_recipe'])
                 found_recipe = True
         print("\n")
 
@@ -119,7 +119,7 @@ def fonction_master_recipe(data, today):
         #Impression titre puis ingrédients avec tirets et instructions
         #Tenir compte du jour pour versions futures au niveau des suggestions
 
-        print("As today is,",today,", I suggest you : ",recipe['title'])
+        print("As today is,",today,", I suggest you : ",recipe['title'], "-", recipe['t_recipe'])
         print("Recipe Number : ", num)
         print("\n")
         print("Ingredients :")
