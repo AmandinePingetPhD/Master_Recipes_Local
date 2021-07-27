@@ -10,7 +10,7 @@ Fonction de suggestion de recettes
 #Initialisation
 import os
 import sys
-import ssl
+# import ssl
 
 import pywebio
 from pywebio.input import *
