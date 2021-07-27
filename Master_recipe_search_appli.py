@@ -78,6 +78,9 @@ def fonction_master_recipe(data, today):
         """
         found_recipe = False
         key_words = input("What are you looking for? Please enter a recipe key-word: ")
+
+        # Ajout du type de plat? t_recipe => restreindre le nombre de résultats
+
         
         # Vérifier si la première lettre est en majuscule : sinon : mettre en majuscule
         # Vérifier si tout en majuscule : si c'est cas : mettre juste première lettre
