@@ -176,7 +176,7 @@ def fonction_master_recipe(data, today):
         if (choice=='Y' or choice=='y'):
             fonction_master_recipe(data,today)    
         else:
-            put_text("Good bye, see you later ;)", "\n")
+            put_text("Have a nice cooking time and meal! Good bye, see you later ;)", "\n")
 
 
     ####Exécution du programme
