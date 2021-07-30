@@ -77,10 +77,13 @@ def fonction_master_recipe(data, today):
         Recherche de recette par mot clé dans le titre uniquement
         """
         found_recipe = False
-        key_words = input("What are you looking for? Please enter a recipe key-word: ")
 
         # Ajout du type de plat? t_recipe => restreindre le nombre de résultats
         # Demander le type de plat
+
+        kind_dish = input("What kind of dish go you want to cook? Please provide you choice between: Dish with meat, Dessert, Dessert with fruit, Dish with veggies, Dish with Sea Food/fish, Pasta, Side Dish, Pizza, Drink, Sandwich, Dish with egg, Recipes for dogs")
+
+        key_words = input("What are you looking for? Please enter a recipe key-word: ")
 
         
         # Vérifier si la première lettre est en majuscule : sinon : mettre en majuscule
@@ -102,7 +105,7 @@ def fonction_master_recipe(data, today):
         lres = []
         #Recherche du/des mots-clés dans le titre et impression des recettes résultats
         for keys in data:
-            if key_w in data[keys]['title']:
+            if key_w in data[keys]['title'] and kind_dish == data[keys]['t_recipe']:
                 lres.append(data[keys]['RecipeId'])
                 put_text(data[keys]['RecipeId'], "-", data[keys]['title'], "-", data[keys]['t_recipe'])
                 found_recipe = True
