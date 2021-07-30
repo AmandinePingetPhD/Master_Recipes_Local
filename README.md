@@ -10,7 +10,7 @@ Affichage du titre de la recette quand recherche d'ingrédients - listes de rece
 Affichage quand recherche par ingrédients : Recette au hasard puis choix du numéro de recette et affichage de la recette
 Affichage de la date du jour
 Catégorisation des recettes par types : plat avec légumes, viande, poisson, dessert, boisson....
-
+Demande de type de plat souhaité pour la recherche par ingrédient
 
 En cours :
 Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...) => Création d'une nouvelle base avec unités metriques puis appel à base impériale/métrique suivant choix?
