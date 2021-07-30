@@ -67,6 +67,7 @@ def fonction_master_recipe(data, today):
         """
         Première version avec choix aléatoire de recette suivant ID/numéro de recette
         """
+        # Modifier avec demande du type de plat? et tirage aléatoire mais vérif que t-recipe correspond? A voir
         num = 0
         # Recettes numérotée de 1 à 39517
         num = random.randint(1,39517)
