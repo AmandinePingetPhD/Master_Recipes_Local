@@ -117,8 +117,8 @@ def fonction_master_recipe(data, today):
             alea = input("Do you want a random choice for your recipe? (Y/N)")
             while (alea=='Y' or alea=='y'): #Boucle pour random choice
                 num = random.choice(lres)
-                recipe = lecture_info_recette(num, data)
-                print_recette(num, recipe)
+                recipe, dish_type = lecture_info_recette(num, data)
+                print_recette(num, recipe, dish_type)
                 alea = input("Do you want another random choice for your recipe? (Y/N)") #autres choix aléatoire? Utile ou pas?
             #Choix de la recette + impression / message d'erreur si pas trouvé : nouvelle recherche
             else :
@@ -127,8 +127,8 @@ def fonction_master_recipe(data, today):
                 while (numero.isnumeric()!=True or int(numero)>39517):
                     numero = input("Recipe number is invalid! Could you please enter another recipe number?")
                 num = int(numero)
-                recipe = lecture_info_recette(num, data)
-                print_recette(num, recipe)
+                recipe, dish_type = lecture_info_recette(num, data)
+                print_recette(num, recipe, dish_type)
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
@@ -143,18 +143,18 @@ def fonction_master_recipe(data, today):
         for keys in data:
             if num == data[keys]['RecipeId']:
                 recipe = data[keys]
-                # lecture du type de recette
+                dish_type = recipe['t_recipe']# lecture du type de recette
                 break
-        return recipe
+        return recipe, dish_type
 
-    def print_recette(num, recipe):
+    def print_recette(num, recipe, dish_type):
         """
         Impression de la recette choisie
         """    
         #Impression titre puis ingrédients avec tirets et instructions
         #Tenir compte du jour pour versions futures au niveau des suggestions
         
-        put_text("As today is,",today,", I suggest you : ", recipe['title'], "-", recipe['t_recipe'])
+        put_text("As today is,",today,", I suggest you : ", recipe['title'], "-", dish_type)
         put_text("Recipe Number : ", num)
         put_text("\n")
         put_text("Ingredients :")
@@ -196,16 +196,20 @@ def fonction_master_recipe(data, today):
         search_recipe(data, kind_dish)
     else:   #Si non: recette choisie au hasard
         num = choix_recette()
-        recipe = lecture_info_recette(num, data)
+        recipe, dish_type = lecture_info_recette(num, data)
         #test si bon type de recette  == type demandé
-        print_recette(num, recipe)
+        while kind_dish != dish_type:
+            num = choix_recette()
+            recipe, dish_type = lecture_info_recette(num, data)
+        else:
+            print_recette(num, recipe, dish_type)
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
     ask_another_recipe()
     
     ### Improve print
     ### Rating recipes?
-    ### Random choice when special ingredient or ask another complementary?elcome
+    ### Random choice when special ingredient or ask another complementary?
 
 def main():
 
