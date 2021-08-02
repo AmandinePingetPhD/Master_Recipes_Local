@@ -143,6 +143,7 @@ def fonction_master_recipe(data, today):
         for keys in data:
             if num == data[keys]['RecipeId']:
                 recipe = data[keys]
+                # lecture du type de recette
                 break
         return recipe
 
@@ -186,12 +187,15 @@ def fonction_master_recipe(data, today):
     search = input("Do you want to search a special recipe? Y/N ")
     put_text("\n")
 
+    # Demande du type de recette
+
     #Si oui: fonction de search
     if (search=='Y' or search=='y'):
         search_recipe(data)
     else:   #Si non: recette choisie au hasard
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
+        #test si bon type de recette  == type demandé
         print_recette(num, recipe)
 
     #Demande si besoin d'une autre recette : si oui: boucle programme si non: exit 
