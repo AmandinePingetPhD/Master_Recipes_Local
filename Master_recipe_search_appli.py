@@ -73,7 +73,7 @@ def fonction_master_recipe(data, today):
         num = random.randint(1,39517)
         return num
 
-    def search_recipe(data):
+    def search_recipe(data, kind_dish):
         """
         Recherche de recette par mot clé dans le titre uniquement
         """
@@ -82,7 +82,7 @@ def fonction_master_recipe(data, today):
         # Ajout du type de plat? t_recipe => restreindre le nombre de résultats
         # Demander le type de plat
 
-        kind_dish = input("What kind of dish go you want to cook? Please provide you choice between: Dish with meat, Dessert, Dessert with fruit, Dish with veggies, Dish with Sea Food/fish, Pasta, Side Dish, Pizza, Drink, Sandwich, Dish with egg, Recipes for dogs")
+        # kind_dish = input("What kind of dish go you want to cook? Please provide you choice between: Dish with meat, Dessert, Dessert with fruit, Dish with veggies, Dish with Sea Food/fish, Pasta, Side Dish, Pizza, Drink, Sandwich, Dish with egg, Recipes for dogs")
 
         key_words = input("What are you looking for? Please enter a recipe key-word: ")
 
@@ -132,7 +132,7 @@ def fonction_master_recipe(data, today):
         elif found_recipe == False:
             search = input("\n I'm sorry, I haven't found what you're looking for. Another try? (Y/N) \n")
             if (search=='Y' or search=='y'):
-                search_recipe(data)
+                search_recipe(data, kind_dish)
 
     def lecture_info_recette(num, data):
         """
@@ -188,10 +188,12 @@ def fonction_master_recipe(data, today):
     put_text("\n")
 
     # Demande du type de recette
+    kind_dish = input("What kind of dish go you want to cook? Please provide you choice between: Dish with meat, Dessert, Dessert with fruit, Dish with veggies, Dish with Sea Food/fish, Pasta, Side Dish, Pizza, Drink, Sandwich, Dish with egg, Recipes for dogs")
+
 
     #Si oui: fonction de search
     if (search=='Y' or search=='y'):
-        search_recipe(data)
+        search_recipe(data, kind_dish)
     else:   #Si non: recette choisie au hasard
         num = choix_recette()
         recipe = lecture_info_recette(num, data)
