@@ -10,13 +10,12 @@ Affichage du titre de la recette quand recherche d'ingrédients - listes de rece
 Affichage quand recherche par ingrédients : Recette au hasard puis choix du numéro de recette et affichage de la recette
 Affichage de la date du jour
 Catégorisation des recettes par types : plat avec légumes, viande, poisson, dessert, boisson....
-Demande de type de plat souhaité pour la recherche par ingrédient
+Demande de type de plat souhaité (pour la recherche par ingrédient et suggestion de recette)
 
 En cours :
 Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...) => Création d'une nouvelle base avec unités metriques puis appel à base impériale/métrique suivant choix?
 Ajout d'un historique des recettes imprimées?
 Introduire les catégories : salé / sucré et classification plus détaillé avec ingrédients (dish with veggies/meat/fish...)
-Demander le type de plat => Faire une recherche par type de plat / ingrédient? Ingrédient dans titre Ok
 Check sur les différentes catégories : correct ou pas?
 
 A faire : 
@@ -28,7 +27,7 @@ Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité comment
 Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
 Classification à affiner : plat / dessert, salé, sucré... saisonnalité...
 Améliorer l'export des recettes
-Classifier par plat/dessert/boisson
+Classifier par plat/dessert/boisson - en cours
 Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes? 
 Gestion de base de données pour version en ligne : à implémenter - JSON 
 Interface graphique à prévoir? Django? Autre Python? Javascript?
