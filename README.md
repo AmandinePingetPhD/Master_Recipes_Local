@@ -17,6 +17,8 @@ Conversion des unités impériales (cup, pounds,...) en unités métriques (g, m
 Ajout d'un historique des recettes imprimées?
 Introduire les catégories : salé / sucré et classification plus détaillé avec ingrédients (dish with veggies/meat/fish...)
 Check sur les différentes catégories : correct ou pas?
+V1 sur site opérationnel?
+Cf pour design
 
 A faire : 
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
