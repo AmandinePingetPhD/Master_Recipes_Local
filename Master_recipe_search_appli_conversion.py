@@ -1,5 +1,5 @@
-#### Master Cook - IA de suggestion de recettes v1- avec search #####
-#Python 3.9.5
+#### Master's Recipes - IA de suggestion de recettes v1- avec search #####
+#Python 3.9.6
 #Coding Utf-8
 
 """
@@ -45,7 +45,7 @@ conversion_table = pickle.load(open("conversion_table.pkl", "rb"))
 today = date.today()
 
 #####Titles
-put_markdown('## Welcome to Master Recipes!')
+put_markdown("## Welcome to Master's Recipes!")
 
 os.chdir(newPath)
 img = open('chief1.jpg', 'rb').read() #or 'cook_hat.jpg' / 'chief1.jpg'
@@ -65,7 +65,7 @@ put_text("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 
-def fonction_master_recipe(data, today):
+def fonction_master_recipes(data, today):
     """
     Fonction principale 
     """
@@ -173,7 +173,7 @@ def fonction_master_recipe(data, today):
         choice = input(" \n Do you want another recipe? Y/N ")
         put_text("\n")
         if (choice=='Y' or choice=='y'):
-            fonction_master_recipe(data,today)    
+            fonction_master_recipes(data,today)    
         else:
             put_text("Good bye, see you later ;)", "\n")
 
@@ -201,7 +201,7 @@ def fonction_master_recipe(data, today):
 
 def main():
 
-    pywebio.start_server(fonction_master_recipe(data, today), port=80)    #AssertionError : application type NoneType
+    pywebio.start_server(fonction_master_recipes(data, today), port=80)    #AssertionError : application type NoneType
 
 if __name__ == "__main__":
     main()

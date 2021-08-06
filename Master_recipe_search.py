@@ -1,4 +1,4 @@
-#### Master Cook - IA de suggestion de recettes v1- avec search #####
+#### Master's Recipes - IA de suggestion de recettes v1- avec search #####
 #Python 3.9.6
 #Coding Utf-8
 
@@ -42,7 +42,7 @@ print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 
-def fonction_master_recipe(data, today):
+def fonction_master_recipes(data, today):
     """
     Fonction principale 
     """
@@ -141,7 +141,7 @@ def fonction_master_recipe(data, today):
         choice = input(" \n Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
-            fonction_master_recipe(data,today)    
+            fonction_master_recipes(data,today)    
         else:
             print("Good bye, see you later ;)", "\n")
 
@@ -166,7 +166,7 @@ def fonction_master_recipe(data, today):
 
 def main():
 
-    fonction_master_recipe(data, today)    
+    fonction_master_recipes(data, today)    
 
 if __name__ == "__main__":
     main()

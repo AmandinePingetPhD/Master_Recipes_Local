@@ -1,5 +1,5 @@
-#### Master Cook - IA de suggestion de recettes v0 #####
-#Python 3.7.1
+#### Master's Recipes - IA de suggestion de recettes v0 #####
+#Python 3.9.6
 #Coding Utf-8
 
 """
@@ -27,7 +27,7 @@ print("\n", "Hello Ama, what do you want to cook today?", "\n")
 with open('recipes_raw_result.json', 'r') as f:
     data = json.load(f)
 
-def fonction_master_cook(data):
+def fonction_master_recipes(data):
     """
     Fonction principale 
     """
@@ -72,7 +72,7 @@ def fonction_master_cook(data):
         choice = input("Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
-            fonction_master_cook(data)    
+            fonction_master_recipes(data)    
         else:
             print("Good bye, see you later ;)", "\n")
 
@@ -84,7 +84,7 @@ def fonction_master_cook(data):
 
 def main():
 
-    fonction_master_cook(data)    
+    fonction_master_recipes(data)    
 
 if __name__ == "__main__":
     main()
