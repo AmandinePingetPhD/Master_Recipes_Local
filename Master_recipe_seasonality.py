@@ -115,7 +115,7 @@ def fonction_master_recipes(data, today):
                 found_recipe = True
                 # print(data[keys])
         if found_recipe == False:
-            search = input("\n", "I'm sorry, I haven't found what you're looking for. Another try? (Y/N)", "\n")
+            search = input("I'm sorry, I haven't found what you're looking for. Another try? (Y/N)")
             if (search=='Y' or search=='y'):
                 search_recipe(data)
         #     else:
