@@ -155,3 +155,7 @@ Data_recipes/recipes_raw_result.json
 Liste_minuscule.py
 Data_recipes_modif.ipynb
 Dockerfile.dockerfile
+.dockerignore
+docker-compose.debug.yml
+docker-compose.yml
+Dockerfile
