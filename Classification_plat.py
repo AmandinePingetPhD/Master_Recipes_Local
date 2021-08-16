@@ -113,84 +113,74 @@ def classification_recipe(data):
     # p = inflect.engine() ####Singular/plural
 
     for keys in data:
+        data[keys]["t_recipe"]= []
         list_title = [i for item in [data[keys]["title"]] for i in item.split()] #Dans le titre seulement
         title_fruit = set(list_title)&set(fruit)
         is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
         if len(is_fruit)!=0:
-            data[keys].update({"t_recipe": "Dessert with fruit"}) #Fruit
+            data[keys]["t_recipe"].append("Dessert with fruit") #Fruit
+        title_dessert = set(list_title)&set(dessert)
+        is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
+        if len(is_dessert)!=0:
+            data[keys]["t_recipe"].append("Dessert") #Dessert
         else:
-            title_dessert = set(list_title)&set(dessert)
-            is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
-            if len(is_dessert)!=0:
-                data[keys].update({"t_recipe": "Dessert"}) #Dessert
-            else:
-                title_veggie = set(list_title)&set(vegetable) 
-                is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
-                if len(is_veggie)!=0:
-                    data[keys].update({"t_recipe": "Dish with veggies"}) #Légumes
-                else:
-                    title_meat = set(list_title)&set(meat)
-                    is_meat = sorted(title_meat, key = lambda k : list_title.index(k))
-                    if len(is_meat)!=0:
-                        data[keys].update({"t_recipe": "Dish with meat"}) #Viande
-                    else:
-                        title_fish = set(list_title)&set(fish)
-                        is_fish = sorted(title_fish, key = lambda k : list_title.index(k))
-                        if len(is_fish)!=0:
-                            data[keys].update({"t_recipe": "Dish with Sea Food/fish"}) #Poisson
-                        else:
-                            title_egg = set(list_title)&set(egg)
-                            is_egg = sorted(title_egg, key = lambda k : list_title.index(k))
-                            if len(is_egg)!=0:
-                                data[keys].update({"t_recipe": "Dish with egg"}) #Oeuf
-                            else:
-                                title_drink = set(list_title)&set(drink)
-                                is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
-                                if len(is_drink)!=0:
-                                    data[keys].update({"t_recipe": "Drink"}) #Boisson
-                                else:
-                                    title_pizza = set(list_title)&set(pizza)
-                                    is_pizza = sorted(title_pizza, key = lambda k : list_title.index(k))
-                                    if len(is_pizza)!=0:
-                                        data[keys].update({"t_recipe": "Pizza"}) #Pizza
-                                    else:    
-                                        title_pasta = set(list_title)&set(pasta)
-                                        is_pasta = sorted(title_pasta, key = lambda k : list_title.index(k))
-                                        if len(is_pasta)!=0:
-                                            data[keys].update({"t_recipe": "Pasta"}) #Pâtes
-                                        else:
-                                            title_sdish = set(list_title)&set(side_dish)
-                                            is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
-                                            if len(is_sdish)!=0:
-                                                data[keys].update({"t_recipe": "Side Dish"}) #Accompagnement
-                                            else:
-                                                title_sandwich = set(list_title)&set(sandwich)
-                                                is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
-                                                if len(is_sandwich)!=0:
-                                                    data[keys].update({"t_recipe": "Sandwich"}) #Sandwich / Burger /Hot Dog
-                                                else:
-                                                    title_dog = set(list_title)&set(doggie)
-                                                    is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
-                                                    if len(is_doggie)!=0:
-                                                        data[keys].update({"t_recipe": "Recipes for dogs"}) #Recettes pour chien
-                                                    else:
-                                                        #si incconnu 
-                                                        data[keys].update({"t_recipe": "Unknown"})
-                                                    
+            title_veggie = set(list_title)&set(vegetable) 
+            is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
+            if len(is_veggie)!=0:
+                data[keys]["t_recipe"].append("Dish with veggies") #Légumes
+            title_meat = set(list_title)&set(meat)
+            is_meat = sorted(title_meat, key = lambda k : list_title.index(k))
+            if len(is_meat)!=0:
+                data[keys]["t_recipe"].append("Dish with meat") #Viande
+            title_fish = set(list_title)&set(fish)
+            is_fish = sorted(title_fish, key = lambda k : list_title.index(k))
+            if len(is_fish)!=0:
+                data[keys]["t_recipe"].append("Dish with Sea Food/fish") #Poisson
+            title_egg = set(list_title)&set(egg)
+            is_egg = sorted(title_egg, key = lambda k : list_title.index(k))
+            if len(is_egg)!=0:
+                data[keys]["t_recipe"].append("Dish with egg") #Oeuf
+            title_drink = set(list_title)&set(drink)
+            is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
+            if len(is_drink)!=0:
+                data[keys]["t_recipe"].append("Drink") #Boisson
+            title_pizza = set(list_title)&set(pizza)
+            is_pizza = sorted(title_pizza, key = lambda k : list_title.index(k))
+            if len(is_pizza)!=0:
+                data[keys]["t_recipe"].append("Pizza") #Pizza
+            title_pasta = set(list_title)&set(pasta)
+            is_pasta = sorted(title_pasta, key = lambda k : list_title.index(k))
+            if len(is_pasta)!=0:
+                data[keys]["t_recipe"].append("Pasta") #Pâtes
+            title_sdish = set(list_title)&set(side_dish)
+            is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
+            if len(is_sdish)!=0:
+                data[keys]["t_recipe"].append("Side Dish") #Accompagnement
+            title_sandwich = set(list_title)&set(sandwich)
+            is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
+            if len(is_sandwich)!=0:
+                data[keys]["t_recipe"].append("Sandwich") #Sandwich / Burger /Hot Dog
+            title_dog = set(list_title)&set(doggie)
+            is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
+            if len(is_doggie)!=0:
+                data[keys]["t_recipe"].append("Recipes for dogs") #Recettes pour chien
+            if  data[keys]["t_recipe"] ==[]: #si incconnu 
+                data[keys]["t_recipe"].append("Unknown")
+                        
         list_title = []
     data2 = data
 
     return data2
 
         
-        # with open('recipes_raw_result.json', 'w') as outfile:
-        #     json.dumps(data)#, outfile)
+    # with open('recipes_raw_result.json', 'w') as outfile:
+    #     json.dumps(data)#, outfile)
 
-        # sys.stdout = open("list_recipe_prog.txt", "a")
-        # print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
-        # sys.stdout = open("list_recipe_unknown.txt", "a")
-        # if data[keys]['t_recipe']=="Unknown":
-        #     print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+    # sys.stdout = open("list_recipe_prog.txt", "a")
+    # print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+    # sys.stdout = open("list_recipe_unknown.txt", "a")
+    # if data[keys]['t_recipe']=="Unknown":
+    #     print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
     
     # sys.stdout.close()
     # sys.stdout.close()
