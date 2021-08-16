@@ -174,4 +174,4 @@ def fonction_master_recipes():
 
 
 if __name__ == "__main__":
-    fonction_master_recipes.run()
+    app.run(host='0.0.0.0')
