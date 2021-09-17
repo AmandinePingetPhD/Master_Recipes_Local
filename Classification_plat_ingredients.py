@@ -18,11 +18,8 @@ os.chdir(newPath)
 ####Import packages
 
 import json
-# import pickle
-import re
-# import pandas as pd
-# import numpy as np
 from json.decoder import JSONDecodeError
+import string
 #import inflect #Sing/plur only
 
 #Import des recettes
@@ -51,7 +48,7 @@ def classification_recipe(data):
     # écrire la saison dans le fichier JSON
 
     
-    fruit = ['fruit', 'hazelnuts', 'walnuts', 'chestnuts', 'grapefruit', 'lemon', 'orange', 
+    fruit = ['fruit', 'hazelnuts', 'walnuts', 'chestnuts', 'grapefruit', 'lemon', 'lime', 'orange', 
             'tangerine', 'apricot', 'mango', 'pineapple', 'rhubarb', 'strawberry', 'strawberries',
             'blackberry', 'cherry', 'blueberry', 'nectarine', 'peach', 'plum', 'raspberry', 
             'watermelon', 'apple', 'apples', 'cranberry', 'fig', 'grape', 'pear', 'pomegranate',
@@ -114,6 +111,7 @@ def classification_recipe(data):
     for keys in data:
         data[keys]["t_recipe"]= []
         list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans les ingrédients
+        list_title = [''.join(c for c in s if c not in string.punctuation) for s in list_title]
         title_fruit = set(list_title)&set(fruit)
         is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
         if len(is_fruit)!=0:
@@ -138,10 +136,6 @@ def classification_recipe(data):
         is_egg = sorted(title_egg, key = lambda k : list_title.index(k))
         if len(is_egg)!=0:
             data[keys]["t_recipe"].append("Dish with egg") #Oeuf
-        title_drink = set(list_title)&set(drink)
-        is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
-        if len(is_drink)!=0:
-            data[keys]["t_recipe"].append("Drink") #Boisson
         title_pizza = set(list_title)&set(pizza)
         is_pizza = sorted(title_pizza, key = lambda k : list_title.index(k))
         if len(is_pizza)!=0:
@@ -150,10 +144,6 @@ def classification_recipe(data):
         is_pasta = sorted(title_pasta, key = lambda k : list_title.index(k))
         if len(is_pasta)!=0:
             data[keys]["t_recipe"].append("Pasta") #Pâtes
-        title_sdish = set(list_title)&set(side_dish)
-        is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
-        if len(is_sdish)!=0:
-            data[keys]["t_recipe"].append("Side Dish") #Accompagnement
         title_sandwich = set(list_title)&set(sandwich)
         is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
         if len(is_sandwich)!=0:
@@ -163,12 +153,12 @@ def classification_recipe(data):
         if len(is_doggie)!=0:
             data[keys]["t_recipe"].append("Recipes for dogs") #Recettes pour chien
         if  data[keys]["t_recipe"] ==[]: #si incconnu 
-            data[keys]["t_recipe"].append("Unknown")                   
+            data[keys]["t_recipe"].append("Unknown")                   # 477 unknown - gérer ponctuation
         list_title = []
     # sys.stdout = open("list_recipe_prog.txt", "a")
     # print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
     sys.stdout = open("list_recipe_unknown.txt", "a")
-    if data[keys]['t_recipe']=="Unknown":
+    if data[keys]["t_recipe"]==["Unknown"]:
         print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
     
     # sys.stdout.close()
@@ -184,6 +174,13 @@ def classification_recipe(data):
     # with open('recipes_raw_result_classif2.json', 'w') as outfile:
     #     json.dump(data, outfile)
     # outfile.close()
+
+    #POur unknown - à revoir
+    # for word in list_title:
+    #     if word.islower()==False:
+    #         list_title += word.lower()
+            # print(list_title)
+
 
     return data2
    
