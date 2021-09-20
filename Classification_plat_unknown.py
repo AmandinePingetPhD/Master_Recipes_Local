@@ -109,39 +109,40 @@ def classification_recipe(data):
                  
     # p = inflect.engine() ####Singular/plural
 
-    for keys in data:
-        if data[keys]["t_recipe"] == []:
-            # data[keys]["t_recipe"]= []
-            list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans les ingrédients
-            list_title = [''.join(c for c in s if c not in string.punctuation) for s in list_title]
-            title_drink = set(list_title)&set(drink)
-            is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
-            if len(is_drink)!=0:
-                data[keys]["t_recipe"].append("Drink") #Boisson
-            elif data[keys]["t_recipe"] == []:
-                title_sdish = set(list_title)&set(side_dish)
-                is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
-                if len(is_sdish)!=0:
-                    data[keys]["t_recipe"].append("Side Dish") #Accompagnement
-                elif data[keys]["t_recipe"] == []:
-                    title_fruit = set(list_title)&set(fruit)
-                    is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
-                    if len(is_fruit)!=0:
-                        data[keys]["t_recipe"].append("Dessert with fruit") #Fruit
-                    title_dessert = set(list_title)&set(dessert)
-                    is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
-                    if len(is_dessert)!=0:
-                        data[keys]["t_recipe"].append("Dessert") #Dessert
-                    elif data[keys]["t_recipe"] == []:
-                        title_veggie = set(list_title)&set(vegetable) 
-                        is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
-                        if len(is_veggie)!=0:
-                            data[keys]["t_recipe"].append("Dish with veggies") #Légumes
-        list_title = []
+    # for keys in data:
+    #     if data[keys]["t_recipe"] == []:
+    #         # data[keys]["t_recipe"]= []
+    #         list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans les ingrédients
+    #         list_title = [''.join(c for c in s if c not in string.punctuation) for s in list_title]
+    #         title_drink = set(list_title)&set(drink)
+    #         is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
+    #         if len(is_drink)!=0:
+    #             data[keys]["t_recipe"].append("Drink") #Boisson
+    #         elif data[keys]["t_recipe"] == []:
+    #             title_sdish = set(list_title)&set(side_dish)
+    #             is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
+    #             if len(is_sdish)!=0:
+    #                 data[keys]["t_recipe"].append("Side Dish") #Accompagnement
+    #             elif data[keys]["t_recipe"] == []:
+    #                 title_fruit = set(list_title)&set(fruit)
+    #                 is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
+    #                 if len(is_fruit)!=0:
+    #                     data[keys]["t_recipe"].append("Dessert with fruit") #Fruit
+    #                 title_dessert = set(list_title)&set(dessert)
+    #                 is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
+    #                 if len(is_dessert)!=0:
+    #                     data[keys]["t_recipe"].append("Dessert") #Dessert
+    #                 elif data[keys]["t_recipe"] == []:
+    #                     title_veggie = set(list_title)&set(vegetable) 
+    #                     is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
+    #                     if len(is_veggie)!=0:
+    #                         data[keys]["t_recipe"].append("Dish with veggies") #Légumes
+    #     list_title = []
 
     for keys in data:
-        list_title = [i for item in data[keys]['title'] for i in item.split()] #Dans les ingrédients
-        list_title = [''.join(c for c in s if c not in string.punctuation) for s in list_title]
+        list_temp = str(data[keys]["title"])
+        list_temp = list_temp.lower()
+        list_title = list_temp.split()
         title_dog = set(list_title)&set(doggie)
         is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
         if len(is_doggie)!=0:
