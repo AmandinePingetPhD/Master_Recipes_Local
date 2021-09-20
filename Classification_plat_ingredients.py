@@ -55,7 +55,7 @@ def classification_recipe(data):
             'quince', 'quinces', 'banana', 'bananas', 'kiwi', 'berry', 'applesauce', 'almond', 
             'almonds', 'coconut', 'pecans', 'peaches', 'grapes', 'blueberries']
 
-    vegetable = ['vegetable', 'kale', 'leek', 'radicchio', 'radish', 'rutabaga', 'turnip', 'sprouts', 
+    vegetable = ['vegetable', 'zucchinis', 'kale', 'leek', 'radicchio', 'radish', 'rutabaga', 'turnip', 'sprouts', 
                 'beetroot', 'red cabbage', 'avocado', 'artichoke', 'asparagus', 'spinach', 'carrot', 
                 'carrots', 'pepperoni', 'celeriac', 'chive', 'collard', 'pea', 'fava bean', 'fennel', 
                 'fiddlehead', 'morel', 'mustard', 'eggplant', 'tomato', 'tomatoes', 'corn', 'broccoli', 
@@ -84,7 +84,8 @@ def classification_recipe(data):
              'whiskey', 'vermouth', 'mint', 'wine', 'drink', 'soda', 'rum', 'limeade', 'beverage', 'liqueur', 'champagne',
              'coffee', 'nectar', 'water', 'ale', 'ice']
 
-    dessert = ['creme', 'chocolate', 'granola', 'brownies', 'brownie', 'cookie', 'cookies', 'pancake', 'pancakes',
+    dessert = ['creme', 'chocolate', 'Chocolate', 'vanilla', 'granola', 'brownies', 'brownie', 'cookie', 'cookies', 
+            'pancake', 'pancakes',
             'bread', 'muffins', 'muffin', 'waffles', 'biscuits', 'pie', 'pies', 'crepes', 'pudding', 'cheesecake', 
             'cake', 'cakes', 'bars', 'snickerdoodles', 'cinnabon', 'truffles', 'smokies', 'scones', 'popcorn', 'fudge', 
             'cinnamon', 'rolls', 'baklava', 'tiramisu', 'gingerbread', 'macaroons', 'cupcakes', 'cupcake', 'toffee', 
@@ -120,38 +121,39 @@ def classification_recipe(data):
         is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
         if len(is_dessert)!=0:
             data[keys]["t_recipe"].append("Dessert") #Dessert
-        title_veggie = set(list_title)&set(vegetable) 
-        is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
-        if len(is_veggie)!=0:
-            data[keys]["t_recipe"].append("Dish with veggies") #Légumes
-        title_meat = set(list_title)&set(meat)
-        is_meat = sorted(title_meat, key = lambda k : list_title.index(k))
-        if len(is_meat)!=0:
-            data[keys]["t_recipe"].append("Dish with meat") #Viande
-        title_fish = set(list_title)&set(fish)
-        is_fish = sorted(title_fish, key = lambda k : list_title.index(k))
-        if len(is_fish)!=0:
-            data[keys]["t_recipe"].append("Dish with Sea Food/fish") #Poisson
         title_egg = set(list_title)&set(egg)
         is_egg = sorted(title_egg, key = lambda k : list_title.index(k))
         if len(is_egg)!=0:
             data[keys]["t_recipe"].append("Dish with egg") #Oeuf
-        title_pizza = set(list_title)&set(pizza)
-        is_pizza = sorted(title_pizza, key = lambda k : list_title.index(k))
-        if len(is_pizza)!=0:
-            data[keys]["t_recipe"].append("Pizza") #Pizza
-        title_pasta = set(list_title)&set(pasta)
-        is_pasta = sorted(title_pasta, key = lambda k : list_title.index(k))
-        if len(is_pasta)!=0:
-            data[keys]["t_recipe"].append("Pasta") #Pâtes
-        title_sandwich = set(list_title)&set(sandwich)
-        is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
-        if len(is_sandwich)!=0:
-            data[keys]["t_recipe"].append("Sandwich") #Sandwich / Burger /Hot Dog
-        title_dog = set(list_title)&set(doggie)
-        is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
-        if len(is_doggie)!=0:
-            data[keys]["t_recipe"].append("Recipes for dogs") #Recettes pour chien
+        else:
+            title_veggie = set(list_title)&set(vegetable) 
+            is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
+            if len(is_veggie)!=0:
+                data[keys]["t_recipe"].append("Dish with veggies") #Légumes
+            title_meat = set(list_title)&set(meat)
+            is_meat = sorted(title_meat, key = lambda k : list_title.index(k))
+            if len(is_meat)!=0:
+                data[keys]["t_recipe"].append("Dish with meat") #Viande
+            title_fish = set(list_title)&set(fish)
+            is_fish = sorted(title_fish, key = lambda k : list_title.index(k))
+            if len(is_fish)!=0:
+                data[keys]["t_recipe"].append("Dish with Sea Food/fish") #Poisson
+            title_pizza = set(list_title)&set(pizza)
+            is_pizza = sorted(title_pizza, key = lambda k : list_title.index(k))
+            if len(is_pizza)!=0:
+                data[keys]["t_recipe"].append("Pizza") #Pizza
+            title_pasta = set(list_title)&set(pasta)
+            is_pasta = sorted(title_pasta, key = lambda k : list_title.index(k))
+            if len(is_pasta)!=0:
+                data[keys]["t_recipe"].append("Pasta") #Pâtes
+            title_sandwich = set(list_title)&set(sandwich)
+            is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
+            if len(is_sandwich)!=0:
+                data[keys]["t_recipe"].append("Sandwich") #Sandwich / Burger /Hot Dog
+        # title_dog = set(list_title)&set(doggie)
+        # is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
+        # if len(is_doggie)!=0:
+        #     data[keys]["t_recipe"].append("Recipes for dogs") #Recettes pour chien
         if  data[keys]["t_recipe"] ==[]: #si incconnu 
             data[keys]["t_recipe"].append("Unknown")                   # 477 unknown - gérer ponctuation
         list_title = []
