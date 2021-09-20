@@ -154,17 +154,17 @@ def classification_recipe(data):
         # is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
         # if len(is_doggie)!=0:
         #     data[keys]["t_recipe"].append("Recipes for dogs") #Recettes pour chien
-        if  data[keys]["t_recipe"] ==[]: #si incconnu 
-            data[keys]["t_recipe"].append("Unknown")                   # 477 unknown - gérer ponctuation
+        # if  data[keys]["t_recipe"] ==[]: #si incconnu 
+        #     data[keys]["t_recipe"].append("Unknown")                   # 477 unknown - gérer ponctuation
         list_title = []
     # sys.stdout = open("list_recipe_prog.txt", "a")
     # print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
-    sys.stdout = open("list_recipe_unknown.txt", "a")
-    if data[keys]["t_recipe"]==["Unknown"]:
-        print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
+    # sys.stdout = open("list_recipe_unknown.txt", "a")
+    # if data[keys]["t_recipe"]==["Unknown"]:
+    #     print(data[keys]['title'], data[keys]['RecipeId'], data[keys]['t_recipe'])
     
     # sys.stdout.close()
-    sys.stdout.close()
+    # sys.stdout.close()
     data2 = data
     # ####classif chaud / froid
     ### : "hot", "oven", "bake"
