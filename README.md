@@ -27,13 +27,13 @@ Ajout du search sur plusieurs ingrédients : affiner les résultats + moins de r
 Prise en compte de la date du jour pour la recette
 Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
 Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
-Classification à affiner : plat / dessert, salé, sucré... saisonnalité...
+Classification à affiner : plat / dessert, salé, sucré... saisonnalité... - en cours
 Améliorer l'export des recettes
 Classifier par plat/dessert/boisson - en cours
 Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes? 
 Gestion de base de données pour version en ligne : à implémenter - JSON 
-Interface graphique à prévoir? Django? Autre Python? Javascript?
+Interface graphique à prévoir : En cours Django
 Dessins/templates libre de droit - chef cuisine ok / template à trouver
 Sous forme de chatbot ? 
 
-Fun fact : la base de données a des recettes pour chiens : catégorie à part / bonus? : actuellement mal classifiée
+Fun fact : la base de données a des recettes pour chiens : catégorie à part
