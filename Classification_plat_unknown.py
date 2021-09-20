@@ -48,24 +48,24 @@ def classification_recipe(data):
     # écrire la saison dans le fichier JSON
 
     
-    # fruit = ['fruit', 'hazelnuts', 'walnuts', 'chestnuts', 'grapefruit', 'lemon', 'lime', 'orange', 
-    #         'tangerine', 'apricot', 'mango', 'pineapple', 'rhubarb', 'strawberry', 'strawberries',
-    #         'blackberry', 'cherry', 'blueberry', 'nectarine', 'peach', 'plum', 'raspberry', 
-    #         'watermelon', 'apple', 'apples', 'cranberry', 'fig', 'grape', 'pear', 'pomegranate',
-    #         'quince', 'quinces', 'banana', 'bananas', 'kiwi', 'berry', 'applesauce', 'almond', 
-    #         'almonds', 'coconut', 'pecans', 'peaches', 'grapes', 'blueberries']
+    fruit = ['fruit', 'hazelnuts', 'walnuts', 'chestnuts', 'grapefruit', 'lemon', 'lime', 'orange', 
+            'tangerine', 'apricot', 'mango', 'pineapple', 'rhubarb', 'strawberry', 'strawberries',
+            'blackberry', 'cherry', 'blueberry', 'nectarine', 'peach', 'plum', 'raspberry', 
+            'watermelon', 'apple', 'apples', 'cranberry', 'fig', 'grape', 'pear', 'pomegranate',
+            'quince', 'quinces', 'banana', 'bananas', 'kiwi', 'berry', 'applesauce', 'almond', 
+            'almonds', 'coconut', 'pecans', 'peaches', 'grapes', 'blueberries']
 
-    # vegetable = ['vegetable', 'zucchinis', 'kale', 'leek', 'radicchio', 'radish', 'rutabaga', 'turnip', 'sprouts', 
-    #             'beetroot', 'red cabbage', 'avocado', 'artichoke', 'asparagus', 'spinach', 'carrot', 
-    #             'carrots', 'pepperoni', 'celeriac', 'chive', 'collard', 'pea', 'fava bean', 'fennel', 
-    #             'fiddlehead', 'morel', 'mustard', 'eggplant', 'tomato', 'tomatoes', 'corn', 'broccoli', 
-    #             'cucumber', 'cucumbers', 'bean', 'beans', 'zucchini', 'celery', 'butternut', 'cauliflower', 
-    #             'garlic', 'mushroom', 'mushrooms', 'potato', 'potatoes', 'pumpkin', 'sweet potato', 'chard', 
-    #             'chicory', 'pak choi', 'onion', 'salad', 'guacamole', 'veggie', 'rice', 'peppers', 'lentil', 
-    #             'hummus', 'lettuce', 'vegetables', 'vegetarian', 'veggies', 'fries', 'cabbage', 'ratatouille', 
-    #             'squash', 'orzo', 'beets', 'quinoa', 'gazpacho', 'soup', 'dahl', 'blt', 'minestrone', 'colcannon', 
-    #             'slaw', 'chickpea', 'romaine', 'coleslaw', 'peas', 'horseradish', 'okra', 'edamame', 'artichokes',
-    #             'kohlrabi', 'beet', 'beets', 'radishes', 'onions', 'yam', 'tempeh', 'plantains', 'plantain', 'fiddleheads']
+    vegetable = ['vegetable', 'zucchinis', 'kale', 'leek', 'radicchio', 'radish', 'rutabaga', 'turnip', 'sprouts', 
+                'beetroot', 'red cabbage', 'avocado', 'artichoke', 'asparagus', 'spinach', 'carrot', 
+                'carrots', 'pepperoni', 'celeriac', 'chive', 'collard', 'pea', 'fava bean', 'fennel', 
+                'fiddlehead', 'morel', 'mustard', 'eggplant', 'tomato', 'tomatoes', 'corn', 'broccoli', 
+                'cucumber', 'cucumbers', 'bean', 'beans', 'zucchini', 'celery', 'butternut', 'cauliflower', 
+                'garlic', 'mushroom', 'mushrooms', 'potato', 'potatoes', 'pumpkin', 'sweet potato', 'chard', 
+                'chicory', 'pak choi', 'onion', 'salad', 'guacamole', 'veggie', 'rice', 'peppers', 'lentil', 
+                'hummus', 'lettuce', 'vegetables', 'vegetarian', 'veggies', 'fries', 'cabbage', 'ratatouille', 
+                'squash', 'orzo', 'beets', 'quinoa', 'gazpacho', 'soup', 'dahl', 'blt', 'minestrone', 'colcannon', 
+                'slaw', 'chickpea', 'romaine', 'coleslaw', 'peas', 'horseradish', 'okra', 'edamame', 'artichokes',
+                'kohlrabi', 'beet', 'beets', 'radishes', 'onions', 'yam', 'tempeh', 'plantains', 'plantain', 'fiddleheads']
    
     # meat = ['chicken', 'chicken-rotisserie', 'beef', 'turkey', 'rib', 'ribs', 'meatloaf', 'meatloaves', 'meatball',
     #         'meatballs', 'lamb', 'meat', 'pork', 'pig', 'steak', 'steaks', 'quail', 'rabbit', 'poultry', 
@@ -84,15 +84,15 @@ def classification_recipe(data):
              'whiskey', 'vermouth', 'mint', 'wine', 'drink', 'soda', 'rum', 'limeade', 'beverage', 'liqueur', 'champagne',
              'coffee', 'nectar', 'water', 'ale', 'ice']
 
-    # dessert = ['creme', 'chocolate', 'Chocolate', 'vanilla', 'granola', 'brownies', 'brownie', 'cookie', 'cookies', 
-    #         'pancake', 'pancakes',
-    #         'bread', 'muffins', 'muffin', 'waffles', 'biscuits', 'pie', 'pies', 'crepes', 'pudding', 'cheesecake', 
-    #         'cake', 'cakes', 'bars', 'snickerdoodles', 'cinnabon', 'truffles', 'smokies', 'scones', 'popcorn', 'fudge', 
-    #         'cinnamon', 'rolls', 'baklava', 'tiramisu', 'gingerbread', 'macaroons', 'cupcakes', 'cupcake', 'toffee', 
-    #         'cheesecakes', 'biscotti', 'flan', 'zuppa', 'frosting', 'icing', 'puffs', 'fondant', 'shortbread', 'brookies',
-    #         'tart', 'flake', 'candy', 'oatmeal', 'french toast', 'cronuts', 'chia', 'oats', 'crookies', 'marshmallow', 'snaps', 
-    #         'doughnuts', 'glaze', 'beignets', 'birthday', 'chocolate', 'sugar', 'honey', 'marshmallows', 'flour', 'cereal', 
-    #         'jellybeans', 'caramels', 'figs']
+    dessert = ['creme', 'chocolate', 'Chocolate', 'vanilla', 'granola', 'brownies', 'brownie', 'cookie', 'cookies', 
+            'pancake', 'pancakes',
+            'bread', 'muffins', 'muffin', 'waffles', 'biscuits', 'pie', 'pies', 'crepes', 'pudding', 'cheesecake', 
+            'cake', 'cakes', 'bars', 'snickerdoodles', 'cinnabon', 'truffles', 'smokies', 'scones', 'popcorn', 'fudge', 
+            'cinnamon', 'rolls', 'baklava', 'tiramisu', 'gingerbread', 'macaroons', 'cupcakes', 'cupcake', 'toffee', 
+            'cheesecakes', 'biscotti', 'flan', 'zuppa', 'frosting', 'icing', 'puffs', 'fondant', 'shortbread', 'brookies',
+            'tart', 'flake', 'candy', 'oatmeal', 'french toast', 'cronuts', 'chia', 'oats', 'crookies', 'marshmallow', 'snaps', 
+            'doughnuts', 'glaze', 'beignets', 'birthday', 'chocolate', 'sugar', 'honey', 'marshmallows', 'flour', 'cereal', 
+            'jellybeans', 'caramels', 'figs']
 
     # pizza = ['pizza', 'calzones']
 
@@ -111,18 +111,32 @@ def classification_recipe(data):
 
     for keys in data:
         if data[keys]["t_recipe"] == []:
-            data[keys]["t_recipe"]= []
+            # data[keys]["t_recipe"]= []
             list_title = [i for item in data[keys]['ingredients'] for i in item.split()] #Dans les ingrédients
             list_title = [''.join(c for c in s if c not in string.punctuation) for s in list_title]
             title_drink = set(list_title)&set(drink)
             is_drink = sorted(title_drink, key = lambda k : list_title.index(k))
             if len(is_drink)!=0:
                 data[keys]["t_recipe"].append("Drink") #Boisson
-            else:
+            elif data[keys]["t_recipe"] == []:
                 title_sdish = set(list_title)&set(side_dish)
                 is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
                 if len(is_sdish)!=0:
                     data[keys]["t_recipe"].append("Side Dish") #Accompagnement
+                elif data[keys]["t_recipe"] == []:
+                    title_fruit = set(list_title)&set(fruit)
+                    is_fruit = sorted(title_fruit, key = lambda k : list_title.index(k))
+                    if len(is_fruit)!=0:
+                        data[keys]["t_recipe"].append("Dessert with fruit") #Fruit
+                    title_dessert = set(list_title)&set(dessert)
+                    is_dessert = sorted(title_dessert, key = lambda k : list_title.index(k))
+                    if len(is_dessert)!=0:
+                        data[keys]["t_recipe"].append("Dessert") #Dessert
+                    elif data[keys]["t_recipe"] == []:
+                        title_veggie = set(list_title)&set(vegetable) 
+                        is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
+                        if len(is_veggie)!=0:
+                            data[keys]["t_recipe"].append("Dish with veggies") #Légumes
         list_title = []
 
     for keys in data:
