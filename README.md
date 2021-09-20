@@ -20,7 +20,7 @@ Check sur les différentes catégories : correct ou pas?
 V1 sur site opérationnel? Site en cours
 Cf pour design
 
-A faire : 
+A faire :
 Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
 Affichage d'une recette aléatoire issue du Search? puis demander si la recette convient ou autre choix aléatoire?
 Ajout du search sur plusieurs ingrédients : affiner les résultats + moins de recettes
@@ -30,10 +30,10 @@ Classification des recettes en cours... Problème avec la saisonnalité quand pa
 Classification à affiner : plat / dessert, salé, sucré... saisonnalité... - en cours
 Améliorer l'export des recettes
 Classifier par plat/dessert/boisson - en cours
-Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes? 
-Gestion de base de données pour version en ligne : à implémenter - JSON 
+Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes?
+Gestion de base de données pour version en ligne : à implémenter - JSON
 Interface graphique à prévoir : En cours Django
 Dessins/templates libre de droit - chef cuisine ok / template à trouver
-Sous forme de chatbot ? 
+Sous forme de chatbot ?
 
 Fun fact : la base de données a des recettes pour chiens : catégorie à part
