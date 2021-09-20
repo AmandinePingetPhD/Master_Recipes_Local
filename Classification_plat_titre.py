@@ -152,6 +152,11 @@ def classification_recipe(data):
             is_sandwich = sorted(title_sandwich, key = lambda k : list_title.index(k))
             if len(is_sandwich)!=0:
                 data[keys]["t_recipe"].append("Sandwich") #Sandwich / Burger /Hot Dog
+            title_sdish = set(list_title)&set(side_dish)
+            is_sdish = sorted(title_sdish, key = lambda k : list_title.index(k))
+            if len(is_sdish)!=0:
+                data[keys]["t_recipe"].append("Side Dish") #Accompagnement
+
         # title_dog = set(list_title)&set(doggie)
         # is_doggie = sorted(title_dog, key = lambda k : list_title.index(k))
         # if len(is_doggie)!=0:
