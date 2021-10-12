@@ -1,4 +1,4 @@
-AccessControl==5.0
+AccessControl==5.2
 Acquisition==4.8
 argon2-cffi==20.1.0
 asgiref==3.4.1
