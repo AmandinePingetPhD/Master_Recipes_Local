@@ -38,14 +38,14 @@ conversion_table = pickle.load(open("conversion_table.pkl", "rb"))
 
 
 #Date du jour 
-today = date.today()
+date_j = date.today()
 
 #Welcome message : personnalisation avec demande du prénom pour futur programme?
 print("\n", "Hello Ama, what do you want to cook today?", "\n")
 
 
 
-def fonction_master_recipes(data, today):
+def fonction_master_recipes(data, date_j):
     """
     Fonction principale 
     """
@@ -177,6 +177,10 @@ def fonction_master_recipes(data, today):
         #Impression titre puis ingrédients avec tirets et instructions
         #Tenir compte du jour pour versions futures au niveau des suggestions
 
+
+        today = f'{date_j:%d/%m/%Y}'
+
+
         print("As today is,",today,", I suggest you : ",recipe['title'])
         print("Recipe Number : ", num)
         print("\n")
@@ -199,7 +203,7 @@ def fonction_master_recipes(data, today):
         choice = input(" \n Do you want another recipe? Y/N ")
         print("\n")
         if (choice=='Y' or choice=='y'):
-            fonction_master_recipes(data,today)    
+            fonction_master_recipes(data,date_j)    
         else:
             print("Have a nice cooking time and meal! Good bye, see you later ;)", "\n")
 
@@ -231,7 +235,7 @@ def fonction_master_recipes(data, today):
 
 def main():
 
-    fonction_master_recipes(data, today)    
+    fonction_master_recipes(data, date_j)    
 
 if __name__ == "__main__":
     main()
