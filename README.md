@@ -1,39 +1,10 @@
-# Master Recipes
+# Master's Recipes
 
-![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes/blob/4efaa09bfe8488401f3fcd69b38ab75adf38e8fb/Welcome_Master-Recipe.png)
+![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes_Local/blob/58962925f3ffcdea9228b1359cffaaa86689c343/Masters_Recipes_v0.png)
 
-Fonction de suggestion de recettes
+Site de suggestion de recettes
 
-v0 : Aléatoire sur les 39 517 recettes + demande si autre recette à choisir
-Search ingrédient ajouté + plusieurs termes de recherche possibles dans le titre
-Affichage du titre de la recette quand recherche d'ingrédients - listes de recette solution
-Affichage quand recherche par ingrédients : Recette au hasard puis choix du numéro de recette et affichage de la recette
-Affichage de la date du jour
-Catégorisation des recettes par types : plat avec légumes, viande, poisson, dessert, boisson....
-Demande de type de plat souhaité (pour la recherche par ingrédient et suggestion de recette)
+v0 disponible à cette adresse : https://mastersrecipes.azurewebsites.net/
 
-En cours :
-Conversion des unités impériales (cup, pounds,...) en unités métriques (g, ml,...) => Création d'une nouvelle base avec unités metriques puis appel à base impériale/métrique suivant choix?
-Ajout d'un historique des recettes imprimées?
-Introduire les catégories : salé / sucré et classification plus détaillé avec ingrédients (dish with veggies/meat/fish...)
-Check sur les différentes catégories : correct ou pas?
-V1 sur site opérationnel? Site en cours
-Cf pour design
+Les fichiers de ce répertoire correspondent au POC réalisé, tout n'a pas été implémenté dans la version initale de Master's Recipes.
 
-A faire :
-Utile ou pas : search sur la liste d'ingrédients et pas uniquement sur titre recette? Amélioration?
-Affichage d'une recette aléatoire issue du Search? puis demander si la recette convient ou autre choix aléatoire?
-Ajout du search sur plusieurs ingrédients : affiner les résultats + moins de recettes
-Prise en compte de la date du jour pour la recette
-Saisonnalité à ajouter -- Passage avec jour en lien avec saisonnalité commenté
-Classification des recettes en cours... Problème avec la saisonnalité quand pas de fruit/légume dans la recette
-Classification à affiner : plat / dessert, salé, sucré... saisonnalité... - en cours
-Améliorer l'export des recettes
-Classifier par plat/dessert/boisson - en cours
-Bdd à modifier? Cleaning : enlever recettes "outliers"/non pertinentes?
-Gestion de base de données pour version en ligne : à implémenter - JSON
-Interface graphique à prévoir : En cours Django
-Dessins/templates libre de droit - chef cuisine ok / template à trouver
-Sous forme de chatbot ?
-
-Fun fact : la base de données a des recettes pour chiens : catégorie à part
