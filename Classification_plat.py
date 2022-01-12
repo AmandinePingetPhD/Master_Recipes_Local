@@ -1,31 +1,22 @@
-#### Master Cook - IA de suggestion de recettes v0 #####
-#Python 3.9.6
-#Coding Utf-8
+"""Master Cook - IA de suggestion de recettes v0."""
 
+import os
+import sys
+import json
+from json.decoder import JSONDecodeError
+
+# Python 3.9.6
+# Coding Utf-8
 """
 Fonction de classification des recettes par saison et autre
 @author : Amandine Pinget, PhD
 """
-
-import os
-import sys
-
 fileDir = os.path.dirname(os.path.abspath(__file__))
 newPath = os.path.join(fileDir, 'Data_recipes')
 sys.path.append(newPath)
 os.chdir(newPath)
 
-####Import packages
-
-import json
-# import pickle
-import re
-# import pandas as pd
-# import numpy as np
-from json.decoder import JSONDecodeError
-#import inflect #Sing/plur only
-
-#Import des recettes
+# Import recipes
 with open('recipes_raw_result.json') as jsonfile:
     try:
         Rawdata = jsonfile.read()
@@ -36,45 +27,52 @@ with open('recipes_raw_result.json') as jsonfile:
 
 def classification_recipe(data):
     """
-    Fonction de classification par type de recettes 
+    Classification function by recipes type.
     """
+    # Review strat classification : unsupervised? 
+    # Modif complexity function : small functions / Ensemble logic
 
-    #Plusieurs classifications/caractérisation des recettes à effectuer:
-    ## - type de plat : salé, sucré, boisson
-    ## - contenu : végétarien, viande, poisson, fruits...
-    ## - chaud/froid
-    ## - saison : printemps, été, automne, hiver 
+    # Several classification to be made : 
+    # - kind dof dish : salty / sweet / drink
+    # - content/ingredients: vegetarian, meat, fish, egg, fruits,...
+    # - hot/cold
+    # - seansonality : spring, summer, autumn, winter 
 
-    # interrogation de la base de données recette :
-    # passage en revue de chaque recette au niveau du titre/des ingrédients
-    # si fruit et légumes id à base table_season : recette de la saison des fruits/légumes
-    # écrire la saison dans le fichier JSON
+    # Ask Db Recipe :
+    # Look for content : title / ingredients
+    # Seasonality table : search fruit / vegetable => season
+    # Write in JSOn output
 
-    
-    fruit = ["Fruit", "Hazelnuts", "Walnuts", "Chestnuts", "Grapefruit", 
-            "Lemon", "Orange", "Tangerine", "Apricot", "Mango",
-            "Pineapple", "Rhubarb", "Strawberry", "Strawberries", "Blackberry",
-            "Cherry", "Blueberry", "Nectarine", "Peach", "Plum",
-            "Raspberry", "Watermelon", "Apple", "Apples", "Cranberry", "Fig",
-            "Grape", "Pear", "Pomegranate", "Quince", "Quinces", "Banana", "Bananas", "Kiwi",
-            "Berry", "Applesauce", "Almond", "Almonds", "Coconut", "Pecans"]
+    fruit = ["Fruit", "Hazelnuts", "Walnuts", "Chestnuts", "Grapefruit",
+             "Lemon", "Orange", "Tangerine", "Apricot", "Mango",
+             "Pineapple", "Rhubarb", "Strawberry", "Strawberries",
+             "Blackberry", "Cherry", "Blueberry", "Nectarine", "Peach", "Plum",
+             "Raspberry", "Watermelon", "Apple", "Apples", "Cranberry", "Fig",
+             "Grape", "Pear", "Pomegranate", "Quince", "Quinces", "Banana",
+             "Bananas", "Kiwi", "Berry", "Applesauce", "Almond", "Almonds",
+             "Coconut", "Pecans"]
 
-    vegetable = ["Vegetable", "Kale", "Leek", "Radicchio", "Radish", "Rutabaga", 
-            "Turnip", "Sprouts", "Beetroot", "Red Cabbage",
-            "Avocado", "Artichoke", "Asparagus", "Spinach", "Carrot", "Carrots",
-            "Pepperoni", "Celeriac", "Chive", "Collard", "Pea", "Fava Bean", 
-            "Fennel", "Fiddlehead", "Morel", "Mustard", "Eggplant",
-            "Tomato", "Tomatoes", "Corn", "Broccoli", "Cucumber", "Cucumbers", "Bean", "Beans", "Zucchini",
-            "Celery", "Butternut", "Cauliflower", "Garlic", "Mushroom", "Mushrooms",
-            "Potato", "Potatoes", "Pumpkin", "Sweet Potato", "Chard", "Chicory",
-            "Pak Choi", "Onion", "Salad", "Guacamole", "Veggie", "Rice", "Peppers", 
-            "Lentil", "Hummus", "Lettuce", "Vegetables", "Vegetarian", "Veggies",
-            "Fries", "Cabbage", "Ratatouille", "Squash", "Orzo", "Beets", "Quinoa", 
-            "Gazpacho", "Soup", "Dahl", "BLT", "Minestrone", "Colcannon", "Slaw", 
-            "Chickpea", "Romaine", "Coleslaw", "Peas"]
-   
-    meat = ["Chicken", "Chicken-Rotisserie", "Beef", "Turkey","Rib", "Ribs", "Meatloaf", "Meatloaves",
-    "Meatball","Meatballs", "Lamb", "Meat", "Pork", "Pig", "Steak", "Steaks", "Quail", "Rabbit", "Poultry", "Sausage",
+    vegetable = ["Vegetable", "Kale", "Leek", "Radicchio", "Radish",
+                 "Rutabaga", "Turnip", "Sprouts", "Beetroot",
+                 "Red Cabbage", "Avocado", "Artichoke", "Asparagus",
+                 "Spinach", "Carrot", "Carrots", "Pepperoni",
+                 "Celeriac", "Chive", "Collard", "Pea", "Fava Bean",
+                 "Fennel", "Fiddlehead", "Morel", "Mustard",
+                 "Eggplant", "Tomato", "Tomatoes", "Corn", "Broccoli",
+                 "Cucumber", "Cucumbers", "Bean", "Beans", "Zucchini",
+                 "Celery", "Butternut", "Cauliflower", "Garlic",
+                 "Mushroom", "Mushrooms", "Potato", "Potatoes",
+                 "Pumpkin", "Sweet Potato", "Chard", "Chicory",
+                 "Pak Choi", "Onion", "Salad", "Guacamole", "Veggie",
+                 "Rice", "Peppers", "Lentil", "Hummus", "Lettuce",
+                 "Vegetables", "Vegetarian", "Veggies", "Fries",
+                 "Cabbage", "Ratatouille", "Squash", "Orzo",
+                 "Beets", "Quinoa", "Gazpacho", "Soup", "Dahl",
+                 "BLT", "Minestrone", "Colcannon", "Slaw",
+                 "Chickpea", "Romaine", "Coleslaw", "Peas"]
+
+    meat = ["Chicken", "Chicken-Rotisserie", "Beef", "Turkey", "Rib", "Ribs", "Meatloaf", "Meatloaves",
+    "Meatball", "Meatballs", "Lamb", "Meat", "Pork", "Pig", "Steak", "Steaks", "Quail", "Rabbit", "Poultry", "Sausage",
      "Sirloin", "Bacon", "Filet", "Pollo", "Scallops", "Chili", "Taco", "Enchiladas", "Jambalaya", "Goulash", 
      "Carne", "Stew", "Ham", "Wings", "Osso", "Roast", "Sloppy", "Mahi", "Duck", "Brisket", "Prosciutto", 
      "Casserole", "Cooker", "Quiche", "Dumplings", "Gravy", "Moussaka"]
@@ -110,8 +108,6 @@ def classification_recipe(data):
 
     doggie = ["Doggie", "Doggy", "Dog Treats", "Dog Biscuits", "Dog Food", "Good Dog"]
                  
-    # p = inflect.engine() ####Singular/plural
-
     for keys in data:
         data[keys]["t_recipe"]= []
         list_title = [i for item in [data[keys]["title"]] for i in item.split()] #Dans le titre seulement
@@ -124,7 +120,7 @@ def classification_recipe(data):
         if len(is_dessert)!=0:
             data[keys]["t_recipe"].append("Dessert") #Dessert
         else:
-            title_veggie = set(list_title)&set(vegetable) 
+            title_veggie = set(list_title)&set(vegetable)
             is_veggie = sorted(title_veggie, key = lambda k : list_title.index(k))
             if len(is_veggie)!=0:
                 data[keys]["t_recipe"].append("Dish with veggies") #Légumes
