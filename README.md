@@ -19,6 +19,11 @@ Site :
 
 * V0 site : pc/mobile/tablette
 
-* Page spéciale pour recettes de Noël : 09/12/2021
+* Page de suggestion de recette : Exemple de recette :
+![Alt text](https://github.com/AmandinePingetPhD/mrdjangoazure/blob/6c7074d64495e0759698b5fadf5d3075b845a198/mastersrecipes/static/mastersrecipes/img/Ex_recipe.png)
+
+
+* Page spéciale pour recettes de Noël : 09/12/2021 => 22/01/2021
+![Alt text](https://github.com/AmandinePingetPhD/mrdjangoazure/blob/6c7074d64495e0759698b5fadf5d3075b845a198/mastersrecipes/static/mastersrecipes/img/Christmas_recipes.png)
 
 * Référencement Google : Ok 10/12/21
