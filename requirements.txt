@@ -54,7 +54,7 @@ lxml==4.6.5
 Markdown==3.3.4
 MarkupSafe==2.0.1
 matplotlib-inline==0.1.2
-mistune==0.8.4
+mistune==2.0.3
 MultiMapping==4.1
 multipart==0.2.4
 nbclient==0.5.3
