@@ -6,7 +6,7 @@ Site de suggestion de recettes
 
 v0 disponible à cette adresse : https://mastersrecipes.azurewebsites.net/
 
-Les fichiers de ce répertoire correspondent au POC réalisé, tout n'a pas été implémenté dans la version initale de Master's Recipes.
+Les fichiers de ce répertoire correspondent au POC initial réalisé, le code du site en ligne n'est pas identique.
 
 Des améliorations/ajouts de fonctionnalités sont en cours.
 
@@ -20,10 +20,7 @@ Site :
 * V0 site : pc/mobile/tablette
 
 * Page de suggestion de recette : Exemple de recette :
-![Alt text](https://github.com/AmandinePingetPhD/mrdjangoazure/blob/6c7074d64495e0759698b5fadf5d3075b845a198/mastersrecipes/static/mastersrecipes/img/Ex_recipe.png)
+![Alt text](https://github.com/AmandinePingetPhD/Master_Recipes_Local/blob/cdf9b962731d901d9da7488c15d36e68fa6e6c72/Ex_recipe.png)
 
-
-* Page spéciale pour recettes de Noël : 09/12/2021 => 22/01/2021
-![Alt text](https://github.com/AmandinePingetPhD/mrdjangoazure/blob/6c7074d64495e0759698b5fadf5d3075b845a198/mastersrecipes/static/mastersrecipes/img/Christmas_recipes.png)
 
 * Référencement Google : Ok 10/12/21
