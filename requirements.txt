@@ -31,7 +31,7 @@ DocumentTemplate==4.0
 entrypoints==0.3
 ExtensionClass==4.5.1
 fastapi==0.68.0
-Flask==2.0.1
+Flask==2.3.2
 gunicorn==20.1.0
 h11==0.12.0
 h2==4.0.0
