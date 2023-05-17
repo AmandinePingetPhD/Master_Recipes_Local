@@ -101,7 +101,7 @@ Send2Trash==1.7.1
 six==1.16.0
 soupsieve==2.2.1
 sqlparse==0.4.4
-starlette==0.25.0
+starlette==0.27.0
 swapper==1.1.2.post1
 terminado==0.10.1
 testpath==0.5.0
