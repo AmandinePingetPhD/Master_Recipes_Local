@@ -4,7 +4,7 @@
 
 Site de suggestion de recettes
 
-v0 disponible à cette adresse : https://mastersrecipes.azurewebsites.net/
+v0 précédemment disponible à cette adresse : https://mastersrecipes.azurewebsites.net/ (site non disponible actuellement)
 
 Les fichiers de ce répertoire correspondent au POC initial réalisé, le code du site en ligne n'est pas identique.
 
