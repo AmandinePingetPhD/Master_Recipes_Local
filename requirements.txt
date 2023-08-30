@@ -95,7 +95,7 @@ PyYAML==5.4.1
 pyzmq==22.1.0
 regex==2021.10.8
 requests==2.31.0
-RestrictedPython==6.1
+RestrictedPython==6.2
 roman==3.3
 Send2Trash==1.7.1
 six==1.16.0
