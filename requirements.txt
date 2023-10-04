@@ -131,7 +131,7 @@ ZConfig==3.6.0
 zExceptions==4.2
 ZODB==5.6.0
 zodbpickle==2.2.0
-Zope==5.3
+Zope==5.8.6
 zope.annotation==4.7.0
 zope.browser==2.3
 zope.browsermenu==4.4
